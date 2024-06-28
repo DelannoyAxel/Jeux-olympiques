@@ -67,12 +67,36 @@ header .navTel .menu {
 header .navTel .menu.open {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  padding: 15%  5%;
 }
 header .navTel .menu a {
-  color: white;
+  color: var(--grey);
   text-decoration: none;
   margin: 0.5rem 0;
+  opacity: 0;
+  transform: translateY(-50px);
+  transition: opacity 0.5s, transform 0.5s;
+}
+header .navTel .menu a::before,
+header .navTel .menu a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: var(--gold);
+  transition: width 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+header .navTel .menu a::after {
+  left: auto;
+  right: 0;
+  background-color: var(--gold);
+}
+header .navTel .menu a:hover::before,
+header .navTel .menu a:hover::after {
+  width: 100%;
+  /* Longueur du soulignement à 100% */
 }
 header .navTel .logoJo {
   width: 12%;
@@ -81,13 +105,11 @@ header .navTel .logoJo {
 header .navTel .profil {
   width: 5%;
   cursor: pointer;
-  z-index: 999;
 }
 .hero {
   background-image: url("images/escrim-big.png");
   background-size: cover;
   background-repeat: no-repeat;
-  height: 25vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -97,6 +119,7 @@ header .navTel .profil {
   color: var(--gold);
   font-size: 1.8rem;
   margin: 10%;
+  padding-top: 5%;
 }
 footer {
   display: flex;
@@ -105,6 +128,37 @@ footer {
   text-align: center;
   background-color: var(--grey);
 }
+@media only screen and (min-width: 375px) {
+  .navTel .menu a {
+    text-decoration: none;
+    font-size: 1.3rem;
+    margin: 0.5rem 0;
+    opacity: 0;
+    transform: translateY(-50px);
+    transition: opacity 0.5s, transform 0.5s;
+  }
+  .navTel .logoJo {
+    width: 12%;
+    padding-top: 2%;
+  }
+  .navTel .profil {
+    width: 5%;
+    cursor: pointer;
+  }
+  .hero h1 {
+    font-size: 2rem;
+  }
+}
+@media only screen and (min-width: 425px) {
+  .hero h1 {
+    font-size: 2.3rem;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .hero h1 {
+    font-size: 4rem;
+  }
+}
 @media only screen and (min-width: 1024px) {
   header .navTel {
     display: none;
@@ -112,11 +166,10 @@ footer {
   header .navPc {
     display: flex;
     justify-content: space-around;
-    background-color: #252324;
   }
   header .navPc .logoJo {
+    width: 12%;
     padding-top: 1.2%;
-    width: 7%;
   }
   header .navPc .GroupeLeft,
   header .navPc .GroupeRight {
@@ -135,7 +188,15 @@ footer {
     align-items: center;
     font-size: 1rem;
     padding: 1rem;
-    width: 10vw;
+    width: 17vw;
     height: 4vh;
+  }
+  .hero h1 {
+    font-size: 5.5rem;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .hero h1 {
+    font-size: 8rem;
   }
 }

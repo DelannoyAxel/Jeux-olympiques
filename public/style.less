@@ -74,18 +74,49 @@ header {
             z-index: 998;
             width: 100%;
             height: 100vh;
+            
 
             &.open {
                 display: flex;
                 flex-direction: column;
-                align-items: center;
+                padding: 15%  5%;
             }
 
             a {
-                color: white;
+                color: var(--grey);
                 text-decoration: none;
                 margin: 0.5rem 0;
+                opacity: 0;
+                transform: translateY(-50px);
+                transition: opacity 0.5s, transform 0.5s;
             }
+
+            a::before,
+            a::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 0%;
+                // Hauteur du soulignement 
+                height: 2px; 
+                background-color: var(--gold);
+                transition: width 0.3s ease-in-out, opacity 0.3s ease-in-out;
+            }
+            
+            a::after {
+                left: auto;
+                right: 0;
+                background-color: var(--gold);
+            }
+            
+             // Longueur du soulignement à 100% 
+            a:hover::before,
+            a:hover::after {
+                width: 100%; /* Longueur du soulignement à 100% */
+            }
+            
+
         }
 
         .logoJo {
@@ -96,7 +127,6 @@ header {
         .profil {
             width: 5%;
             cursor: pointer;
-            z-index: 999;
 
         }
     }
@@ -107,7 +137,6 @@ header {
     background-image: url("./images/escrim-big.png");
     background-size: cover;
     background-repeat: no-repeat;
-    height: 25vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -117,6 +146,7 @@ header {
         color: var(--gold);
         font-size: 1.8rem;
         margin: 10%;
+        padding-top: 5%;
     }
 }
 
@@ -129,6 +159,69 @@ footer {
     background-color: var(--grey);
 }
 
+@media only screen and (min-width: 375px) {
+
+    .navTel {
+
+        .menu {
+
+            a {
+                text-decoration: none;
+                font-size: 1.3rem;
+                margin: 0.5rem 0;
+                opacity: 0;
+                transform: translateY(-50px);
+                transition: opacity 0.5s, transform 0.5s;
+            }
+
+        }
+
+        .logoJo {
+            width: 12%;
+            padding-top: 2%;
+        }
+
+        .profil {
+            width: 5%;
+            cursor: pointer;
+
+        }
+    }
+
+
+    .hero {
+
+        h1 {
+            font-size: 2rem;
+        }
+    }
+
+}
+
+@media only screen and (min-width: 425px) {
+
+    .hero {
+
+        h1 {
+            font-size: 2.3rem;
+        }
+    }
+
+}
+
+@media only screen and (min-width: 768px) {
+
+
+    .hero {
+
+        h1 {
+            font-size: 4rem;
+        }
+    }
+
+}
+
+
 @media only screen and (min-width: 1024px) {
 
     header {
@@ -140,11 +233,10 @@ footer {
         .navPc {
             display: flex;
             justify-content: space-around;
-            background-color: rgb(37, 35, 36);
 
             .logoJo {
+                width: 12%;
                 padding-top: 1.2%;
-                width: 7%;
             }
 
             .GroupeLeft,
@@ -165,9 +257,27 @@ footer {
                 align-items: center;
                 font-size: 1rem;
                 padding: 1rem;
-                width: 10vw;
+                width: 17vw;
                 height: 4vh;
             }
         }
     }
+
+    .hero {
+
+        h1 {
+            font-size: 5.5rem;
+        }
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+
+    .hero {
+
+        h1 {
+            font-size: 8rem;
+        }
+    }
+
 }
