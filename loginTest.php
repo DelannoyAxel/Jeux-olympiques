@@ -1,12 +1,12 @@
 <?php
 
 ob_start();
-require_once "dbConnect.php";
+require_once 'MyDbConnect.php';
 
 if (isset($_POST['pwd'], $_POST['email'])) {
     $mdp = $_POST['pwd'];
     $email = $_POST['email'];
-    $pdo = getPDOConnexion();
+    $pdo = MyDbConnect::getInstance();
     $stmt = $pdo->prepare('SELECT id, motDePasse, email FROM UTILISATEUR WHERE email = ?');
     $stmt->execute([$email]);
     $utilisateur = $stmt->fetch(PDO::FETCH_ASSOC);

@@ -29,9 +29,8 @@ header .navTel {
 header .navTel .burger {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  width: 1.3rem;
-  height: 15px;
+  gap: 3px;
+  width: 1.2rem;
   cursor: pointer;
   z-index: 999;
 }
@@ -67,7 +66,7 @@ header .navTel .menu {
 header .navTel .menu.open {
   display: flex;
   flex-direction: column;
-  padding: 15%  5%;
+  padding: 15% 5%;
 }
 header .navTel .menu a {
   color: var(--grey);
@@ -99,12 +98,14 @@ header .navTel .menu a:hover::after {
   width: 100%;
 }
 header .navTel .logoJo {
-  width: 12%;
+  width: 15%;
   padding-top: 2%;
 }
 header .navTel .profil {
   width: 5%;
+  font-size: 1rem;
   cursor: pointer;
+  padding-top: 1%;
 }
 footer {
   display: flex;
@@ -114,16 +115,27 @@ footer {
 footer .footerColumn {
   display: flex;
   flex-direction: column;
+  margin: 5% ;
 }
 footer .footerColumn .footerLinks {
   display: flex;
   flex-direction: column;
 }
+footer .footerColumn .footerLinks a:nth-of-type(3) {
+  padding-bottom: 3%;
+}
 footer .footerColumn .royalties {
   text-align: center;
 }
+footer .footerColumn .royalties p:nth-of-type(1) {
+  padding-top: 3%;
+}
 @media only screen and (min-width: 375px) {
-  .navTel .menu a {
+  header .navTel .burger {
+    gap: 4px;
+    width: 1.3rem;
+  }
+  header .navTel .menu a {
     text-decoration: none;
     font-size: 1.3rem;
     margin: 0.5rem 0;
@@ -131,13 +143,54 @@ footer .footerColumn .royalties {
     transform: translateY(-50px);
     transition: opacity 0.5s, transform 0.5s;
   }
-  .navTel .logoJo {
-    width: 12%;
-    padding-top: 2%;
-  }
-  .navTel .profil {
+  header .navTel .profil {
     width: 5%;
+    font-size: 1.1rem;
     cursor: pointer;
+    padding-top: 1.5%;
+  }
+}
+@media only screen and (min-width: 425px) {
+  header .navTel .burger {
+    gap: 4px;
+    width: 1.4rem;
+  }
+  header .navTel .menu a {
+    text-decoration: none;
+    font-size: 1.3rem;
+    margin: 0.5rem 0;
+    opacity: 0;
+    transform: translateY(-50px);
+    transition: opacity 0.5s, transform 0.5s;
+  }
+  header .navTel .profil {
+    width: 5%;
+    font-size: 1.25rem;
+    cursor: pointer;
+    padding-top: 1.8%;
+  }
+}
+@media only screen and (min-width: 768px) {
+  header .navTel .burger {
+    gap: 5px;
+    width: 2rem;
+  }
+  header .navTel .burger span {
+    height: 5px;
+  }
+  header .navTel .menu a {
+    text-decoration: none;
+    font-size: 1.3rem;
+    margin: 0.5rem 0;
+    opacity: 0;
+    transform: translateY(-50px);
+    transition: opacity 0.5s, transform 0.5s;
+  }
+  header .navTel .profil {
+    width: 5%;
+    font-size: 1.7rem;
+    cursor: pointer;
+    padding-top: 0;
   }
 }
 @media only screen and (min-width: 1024px) {

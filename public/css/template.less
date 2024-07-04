@@ -33,9 +33,8 @@ header {
         .burger {
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
-            width: 1.3rem;
-            height: 15px;
+            gap: 3px;
+            width: 1.2rem;
             cursor: pointer;
             z-index: 999;
 
@@ -74,12 +73,12 @@ header {
             z-index: 998;
             width: 100%;
             height: 100vh;
-            
+
 
             &.open {
                 display: flex;
                 flex-direction: column;
-                padding: 15%  5%;
+                padding: 15% 5%;
             }
 
             a {
@@ -99,35 +98,40 @@ header {
                 left: 0;
                 width: 0%;
                 // Hauteur du soulignement 
-                height: 2px; 
+                height: 2px;
                 background-color: var(--gold);
                 transition: width 0.3s ease-in-out, opacity 0.3s ease-in-out;
             }
-            
+
             a::after {
                 left: auto;
                 right: 0;
                 background-color: var(--gold);
             }
-            
-             // Longueur du soulignement à 100% 
+
+            // Longueur du soulignement à 100% 
             a:hover::before,
             a:hover::after {
                 /* Longueur du soulignement à 100% */
-                width: 100%; 
+                width: 100%;
             }
-            
+
 
         }
 
         .logoJo {
-            width: 12%;
+            width: 15%;
             padding-top: 2%;
+
         }
 
         .profil {
+
             width: 5%;
+            font-size: 1rem;
             cursor: pointer;
+            padding-top: 1%;
+
 
         }
     }
@@ -140,17 +144,26 @@ footer {
     flex-direction: column;
     background-color: var(--grey);
 
-    .footerColumn{
+    .footerColumn {
         display: flex;
         flex-direction: column;
+        margin: 5% ;
 
-        .footerLinks{
+        .footerLinks {
             display: flex;
             flex-direction: column;
+
+            a:nth-of-type(3){
+                padding-bottom: 3%;
+            }
         }
 
-        .royalties{
+        .royalties {
             text-align: center;
+
+            p:nth-of-type(1){
+                padding-top: 3%;
+            }
 
         }
     }
@@ -158,49 +171,129 @@ footer {
 
 @media only screen and (min-width: 375px) {
 
-    
 
-    .navTel {
+    header {
 
-        .menu {
 
-            a {
-                text-decoration: none;
-                font-size: 1.3rem;
-                margin: 0.5rem 0;
-                opacity: 0;
-                transform: translateY(-50px);
-                transition: opacity 0.5s, transform 0.5s;
+        .navTel {
+
+            .burger {
+
+                gap: 4px;
+                width: 1.3rem;
+                
             }
 
-        }
+            .menu {
 
-        .logoJo {
-            width: 12%;
-            padding-top: 2%;
-        }
+                a {
+                    text-decoration: none;
+                    font-size: 1.3rem;
+                    margin: 0.5rem 0;
+                    opacity: 0;
+                    transform: translateY(-50px);
+                    transition: opacity 0.5s, transform 0.5s;
+                }
 
+            }
+
+            
         .profil {
+
             width: 5%;
+            font-size: 1.1rem;
             cursor: pointer;
+            padding-top: 1.5%;
+        }
 
         }
     }
-
-
 }
 
 @media only screen and (min-width: 425px) {
 
+    header {
 
 
+        .navTel {
+
+            .burger {
+
+                gap: 4px;
+                width: 1.4rem;
+
+            }
+
+            .menu {
+
+                a {
+                    text-decoration: none;
+                    font-size: 1.3rem;
+                    margin: 0.5rem 0;
+                    opacity: 0;
+                    transform: translateY(-50px);
+                    transition: opacity 0.5s, transform 0.5s;
+                }
+
+            }
+
+            .profil {
+
+                width: 5%;
+                font-size: 1.25rem;
+                cursor: pointer;
+                padding-top: 1.8%;
+
+    
+            }
+
+        }
+    }
 }
 
 @media only screen and (min-width: 768px) {
 
+    header {
 
 
+        .navTel {
 
+            .burger {
+
+                gap: 5px;
+                width: 2rem;
+
+                span{
+                    height: 5px;
+                }
+
+
+            }
+
+            .menu {
+
+                a {
+                    text-decoration: none;
+                    font-size: 1.3rem;
+                    margin: 0.5rem 0;
+                    opacity: 0;
+                    transform: translateY(-50px);
+                    transition: opacity 0.5s, transform 0.5s;
+                }
+
+            }
+
+            .profil {
+
+                width: 5%;
+                font-size: 1.7rem;
+                cursor: pointer;
+                padding-top: 0;
+    
+            }
+
+        }
+    }
 }
 
 

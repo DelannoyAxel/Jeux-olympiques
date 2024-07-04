@@ -16,12 +16,15 @@ if (session_status() == PHP_SESSION_NONE) {
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=M+PLUS+1p&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/e33af3981e.js" crossorigin="anonymous"></script>
     <title><?= htmlspecialchars($title) ?></title>
 </head>
 
 <body>
-<header>
+    <header>
         <!-- Navbar PC -->
         <nav class="navPc">
             <div class="GroupeLeft">
@@ -60,7 +63,7 @@ if (session_status() == PHP_SESSION_NONE) {
                 <i class="fa-solid fa-user" style="color: #ffffff;"></i>
             </div>
         </nav>
-</header>
+    </header>
 
 
     <!-- CONTENU PRINCIPAL DE LA PAGE -->
@@ -68,7 +71,7 @@ if (session_status() == PHP_SESSION_NONE) {
 
     <footer>
         <div class="footerColumn">
-            <div class="footerLinks">            
+            <div class="footerLinks">
                 <h4>Jeux Olympiques</h4>
                 <a href="index.php">ACCUEIL</a>
                 <a href="classement.php">CLASSEMENT</a>
@@ -77,9 +80,9 @@ if (session_status() == PHP_SESSION_NONE) {
 
             <div class="royalties">
                 <hr>
-                    <p>Axel Delannoy @All right reserved</p>
-                    <p>Par Royalties — https://www.paris2024.org/fr/</p>
-            </div>            
+                <p>Axel Delannoy @All right reserved</p>
+                <p>Par Royalties — https://www.paris2024.org/fr/</p>
+            </div>
         </div>
     </footer>
 
