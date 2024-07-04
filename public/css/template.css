@@ -95,8 +95,8 @@ header .navTel .menu a::after {
 }
 header .navTel .menu a:hover::before,
 header .navTel .menu a:hover::after {
-  width: 100%;
   /* Longueur du soulignement à 100% */
+  width: 100%;
 }
 header .navTel .logoJo {
   width: 12%;
@@ -106,27 +106,21 @@ header .navTel .profil {
   width: 5%;
   cursor: pointer;
 }
-.hero {
-  background-image: url("images/escrim-big.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-.hero h1 {
-  color: var(--gold);
-  font-size: 1.8rem;
-  margin: 10%;
-  padding-top: 5%;
-}
 footer {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
   background-color: var(--grey);
+}
+footer .footerColumn {
+  display: flex;
+  flex-direction: column;
+}
+footer .footerColumn .footerLinks {
+  display: flex;
+  flex-direction: column;
+}
+footer .footerColumn .royalties {
+  text-align: center;
 }
 @media only screen and (min-width: 375px) {
   .navTel .menu a {
@@ -145,21 +139,13 @@ footer {
     width: 5%;
     cursor: pointer;
   }
-  .hero h1 {
-    font-size: 2rem;
-  }
-}
-@media only screen and (min-width: 425px) {
-  .hero h1 {
-    font-size: 2.3rem;
-  }
-}
-@media only screen and (min-width: 768px) {
-  .hero h1 {
-    font-size: 4rem;
-  }
 }
 @media only screen and (min-width: 1024px) {
+  header {
+    position: absolute;
+    top: 0px;
+    z-index: 999;
+  }
   header .navTel {
     display: none;
   }
@@ -191,12 +177,12 @@ footer {
     width: 17vw;
     height: 4vh;
   }
-  .hero h1 {
-    font-size: 5.5rem;
-  }
 }
 @media only screen and (min-width: 1440px) {
-  .hero h1 {
-    font-size: 8rem;
+  header .navTel {
+    display: none;
+  }
+  header .navPc a {
+    font-size: 1.2rem;
   }
 }
