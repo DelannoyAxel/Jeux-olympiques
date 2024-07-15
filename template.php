@@ -70,20 +70,37 @@ if (session_status() == PHP_SESSION_NONE) {
     <?= $content ?>
 
     <footer>
-        <div class="footerColumn">
+        <div>
+            <img src="public/images/LOGO JO 1.svg" alt="icone logo jo ">
+        </div>
+
+        <div class="containerLinksReseaux">
+            
             <div class="footerLinks">
                 <h4>Jeux Olympiques</h4>
-                <a href="index.php">ACCUEIL</a>
-                <a href="classement.php">CLASSEMENT</a>
-                <a href="#">INFORMATIONS</a>
+                <a href="index.php">ACTUALITÉS</a>
+                <a href="classement.php">HISTOIRE</a>
+                <a href="#">EPREUVES</a>
+                <a href="#">BILLETERIE</a>
+                <a href="#">CLASSEMENT</a>
             </div>
 
-            <div class="royalties">
-                <hr>
-                <p>Axel Delannoy @All right reserved</p>
-                <p>Par Royalties — https://www.paris2024.org/fr/</p>
+            <div class="reseaux">
+                <h2>ON RESTE EN CONTACT ?</h2>
+                <div><a href="public/images/github.svg"></a></div>
+                <div><a href="public/images/discord.svg"></a></div>
+                <div><a href="public/images/linkedin.svg"></a></div>
             </div>
         </div>
+
+        <div class="royalties">
+            <hr>
+            <p>Par Royalties — https://www.paris2024.org/fr/</p>
+            <a href="">Mentiosn légals</a>
+            <a href="">Plan du site</a>
+            <a href="">Politique des cookies</a>
+        </div>
+
     </footer>
 
     <script src="public/js/style.js"></script>

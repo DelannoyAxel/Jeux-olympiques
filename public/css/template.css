@@ -121,7 +121,7 @@ footer .footerColumn .footerLinks {
   display: flex;
   flex-direction: column;
 }
-footer .footerColumn .footerLinks a:nth-of-type(3) {
+footer .footerColumn .footerLinks a:nth-of-type(5) {
   padding-bottom: 3%;
 }
 footer .footerColumn .royalties {
