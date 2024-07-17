@@ -10,6 +10,7 @@
   --gold: #D6C278;
   font-family: "Inter", sans-serif;
   font-family: "M PLUS 1p", sans-serif;
+  font-family: "Fira Sans", sans-serif;
 }
 header {
   position: fixed;
@@ -107,6 +108,42 @@ header .navTel .profil {
   cursor: pointer;
   padding-top: 1%;
 }
+.partenaires {
+  display: flex;
+  flex-direction: column;
+}
+.partenaires .rowHrTitre {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  padding-top: 5vh;
+}
+.partenaires .rowHrTitre hr {
+  margin: 0 5%;
+  width: 100%;
+}
+.partenaires .rowHrTitre h2 {
+  font-size: 1.7rem;
+  text-align: center;
+  font-family: "Fira Sans", sans-serif;
+  text-transform: uppercase;
+}
+.partenaires .logoPartenaire {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 10px;
+}
+.partenaires .logoPartenaire div {
+  flex: 1 1 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+.partenaires .logoPartenaire div img {
+  width: 100px;
+}
 footer {
   display: flex;
   flex-direction: column;
@@ -147,6 +184,8 @@ footer .containerLinksReseaux .footerLinks div:nth-of-type(1) {
 }
 footer .containerLinksReseaux .footerLinks div:nth-of-type(1) a {
   font-size: 0.6rem;
+  text-decoration: none;
+  color: #232323;
 }
 footer .containerLinksReseaux .reseaux {
   display: flex;
@@ -183,6 +222,8 @@ footer .royalties p {
 }
 footer .royalties a {
   padding-bottom: 2vh;
+  text-decoration: none;
+  color: #232323;
 }
 @media only screen and (min-width: 375px) {
   header .navTel .burger {
@@ -202,6 +243,9 @@ footer .royalties a {
     font-size: 1.1rem;
     cursor: pointer;
     padding-top: 1.5%;
+  }
+  .partenaires .logoPartenaire div img {
+    width: 120px;
   }
   footer > div:first-of-type img {
     top: -26px;
@@ -232,6 +276,9 @@ footer .royalties a {
     font-size: 1.25rem;
     cursor: pointer;
     padding-top: 1.8%;
+  }
+  .partenaires .logoPartenaire div img {
+    width: 140px;
   }
   footer > div:first-of-type img {
     top: -30px;
@@ -280,6 +327,18 @@ footer .royalties a {
     font-size: 1.7rem;
     cursor: pointer;
     padding-top: 0;
+  }
+  .partenaires {
+    padding-bottom: 5vh;
+  }
+  .partenaires .rowHrTitre h2 {
+    font-size: 2.3rem;
+  }
+  .partenaires .logoPartenaire div {
+    flex: 1 1 33.33%;
+  }
+  .partenaires .logoPartenaire div img {
+    width: 170px;
   }
   footer {
     display: flex;
@@ -366,6 +425,19 @@ footer .royalties a {
     width: 17vw;
     height: 4vh;
   }
+  .partenaires {
+    margin: 0 10%;
+    justify-content: center;
+  }
+  .partenaires .rowHrTitre h2 {
+    font-size: 2.5rem;
+  }
+  .partenaires .logoPartenaire div {
+    flex: 1 1 25%;
+  }
+  .partenaires .logoPartenaire div img {
+    width: 200px;
+  }
   footer > div:first-of-type img {
     position: absolute;
     top: -62px;
@@ -393,6 +465,19 @@ footer .royalties a {
   }
   header .navPc a {
     font-size: 1.2rem;
+  }
+  .partenaires {
+    margin: 0 10%;
+    justify-content: center;
+  }
+  .partenaires .rowHrTitre h2 {
+    font-size: 3rem;
+  }
+  .partenaires .logoPartenaire div {
+    flex: 1 1 25%;
+  }
+  .partenaires .logoPartenaire div img {
+    width: 250px;
   }
   footer > div:first-of-type img {
     position: absolute;

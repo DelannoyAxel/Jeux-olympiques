@@ -35,7 +35,7 @@ if (session_status() == PHP_SESSION_NONE) {
             <img class="logoJo" src="./public/images/LOGO JO 1.svg" alt="Logo des jeux olympiques">
 
             <div class="GroupeRight">
-                <a href="#">INFORMATIONS</a>
+                <a href="#">BILLETERIE</a>
                 <a href="login.php">CONNEXION</a>
                 <?php if (isset($_SESSION['idUtilisateur'])) : ?>
                     <a class="navProfil" href="profil.php">MON PROFIL</a>
@@ -69,6 +69,32 @@ if (session_status() == PHP_SESSION_NONE) {
     <!-- CONTENU PRINCIPAL DE LA PAGE -->
     <?= $content ?>
 
+    <section class="partenaires">
+
+        <div class="rowHrTitre">
+            <hr>
+            <h2>
+                Partenaires mondiaux
+            </h2>
+            <hr>
+        </div>
+
+        <div class="logoPartenaire">
+            <div><img src="public/images/Airbnb-Logo.wine.svg" alt="airbnb logo"></div>
+            <div><img src="public/images/Alibaba-logo.svg" alt="alibaba logo "></div>
+            <div><img src="public/images/Allianz-Logo.wine.svg" alt="allianz logo "></div>
+            <div><img src="public/images/Atos-Logo.wine.svg" alt="atos logo"></div>
+            <div><img src="public/images/Bridgestone-Logo.wine.svg" alt="bridgeston logo"></div>
+            <div><img src="public/images/Coca-Cola-Logo.wine.svg" alt="coca cola logo"></div>
+            <div><img src="public/images/Deloitte-Logo.wine.svg" alt="deloitte logo"></div>
+            <div><img src="public/images/Intel-Logo.wine.svg" alt="intel logo"></div>
+            <div><img src="public/images/Panasonic_(brand)-Logo.wine.svg" alt=" panasonic logo"></div>
+            <div><img src="public/images/Samsung-Logo.wine.svg" alt="samsung logo"></div>
+            <div><img src="public/images/Toyota_Canada_Inc.-Logo.wine.svg" alt="toyota logo "></div>
+            <div><img src="public/images/Visa_Inc.-Logo.wine.svg" alt="visa logo "></div>
+        </div>
+    </section>
+
     <footer>
         <div>
             <img src="public/images/LOGO JO 1.svg" alt="icone logo jo ">
@@ -87,7 +113,6 @@ if (session_status() == PHP_SESSION_NONE) {
                 </div>
             </div>
 
-
             <div class="reseaux">
                 <div>
                     <h2>ON RESTE EN CONTACT ?</h2>
@@ -99,8 +124,6 @@ if (session_status() == PHP_SESSION_NONE) {
                 </div>
             </div>
         </div>
-     
-
 
         <div class="royalties">
             <p>Par Royalties — https://www.paris2024.org/fr/</p>

@@ -45,6 +45,68 @@
     }
 }
 
+.actualites{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 5%;
+
+    >div:nth-of-type(1){
+        padding-top: 10%;
+        padding-bottom: 10%;
+
+        h2{
+            font-size: 1.2rem;
+            font-family: "Fira Sans", sans-serif;
+
+            span{
+                color: #D6C278;
+            }
+        }
+    }
+
+
+    .actuRow{
+        display: flex;
+        justify-content: space-between;
+        cursor: pointer;
+
+        .actu{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 1vh;
+            flex: 1 1 65%; 
+
+
+            h3{
+                color: #D6C278;
+                font-size: 1rem;
+            }
+
+            p{
+                font-size: 0.8rem;
+                padding-bottom: 10%;
+
+            }
+
+        }
+
+        .imageInfo{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-bottom: 10%;
+            flex: 1 1 35%; 
+
+
+            img{
+                width: 80px;
+            }
+        }
+    }
+}
+
 
 @media only screen and (min-width: 375px) {
 

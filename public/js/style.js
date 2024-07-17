@@ -25,3 +25,14 @@ document.getElementById('burger').addEventListener('click', function() {
         });
     }
 });
+// ---------------------------
+// redirection des pages 
+
+document.querySelectorAll('.actuRow').forEach(function(actu) {
+    actu.addEventListener('click', function() {
+        const url = this.getAttribute('data-url');
+        if (url) {
+            window.location.href = url;
+        }
+    });
+});

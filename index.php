@@ -11,6 +11,45 @@ ob_start();
 
 </section>
 
+<section class="actualites">
+
+    <div>
+        <h2>TOUTES LES <span>ACTUALITÉS</span></h2>
+    </div>
+
+    <div class="actuRow" data-url="https://olympics.com/fr/infos/championnats-monde-pentathlon-moderne-2024-resultats-finale-hommes-jean-baptiste-mourcia-11e-valentin-belaud-13e">
+        <div class="actu">
+            <h3>Résultats des français</h3>
+            <p>aux mondiaux de penthatlon moderne 2024</p>
+        </div>
+        <div class="imageInfo"><img src="public/images/info1.png" alt=""></div>
+    </div>
+
+    <div class="actuRow" data-url="https://olympics.com/fr/infos/championnats-monde-pentathlon-moderne-2024-presentation-selection-francaise-programme-comment-regarder-elodie-clouvel-valentin-belaud-direct">
+        <div class="actu">
+            <h3>Présentation</h3>
+            <p>mondiaux de penthatlon moderne 2024</p>
+        </div>
+        <div class="imageInfo"><img src="public/images/actu2.png" alt=""></div>
+    </div>
+
+    <div class="actuRow" data-url="https://olympics.com/fr/infos/jo-paris-2024-selection-francaise-liste-complete-athletes-francais-officiellement-selectionnes-direct">
+        <div class="actu">
+            <h3>La séléction </h3>
+            <p>française pour les JO de paris 2024</p>
+        </div>
+        <div class="imageInfo"><img src="public/images/info3.png" alt=""></div>
+    </div>
+
+    <div class="actuRow" data-url="https://olympics.com/fr/infos/a-versailles-le-cheval-est-roi">
+        <div class="actu">
+            <h3>Équitation aux JO</h3>
+            <p> au château de versailles ,le cheval est roi</p>
+        </div>
+        <div class="imageInfo"><img src="public/images/info4.png" alt=""></div>
+    </div>
+</section>
+
 
 <?php
 $content = ob_get_clean();

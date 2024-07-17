@@ -12,7 +12,11 @@
 
     font-family: "Inter", sans-serif;
     font-family: "M PLUS 1p", sans-serif;
+    font-family: "Fira Sans", sans-serif;
+
 }
+
+
 
 header {
     position: fixed;
@@ -137,6 +141,51 @@ header {
     }
 }
 
+.partenaires {
+    display: flex;
+    flex-direction: column;
+
+
+    .rowHrTitre {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        padding-top: 5vh;
+
+        hr {
+            margin: 0 5%;
+            width: 100%;
+        }
+
+        h2 {
+            font-size: 1.7rem;
+            text-align: center;
+            font-family: "Fira Sans", sans-serif;
+            text-transform: uppercase;
+
+        }
+    }
+
+    .logoPartenaire {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 10px;
+
+        div {
+            flex: 1 1 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+
+            img {
+                width: 100px;
+            }
+        }
+    }
+}
+
 
 
 footer {
@@ -182,6 +231,8 @@ footer {
 
                 a {
                     font-size: 0.6rem;
+                    text-decoration: none;
+                    color: #232323;
                 }
             }
         }
@@ -191,7 +242,7 @@ footer {
             flex-direction: column;
             justify-content: center;
             gap: 2vh;
-            width: 80%; 
+            width: 80%;
 
             h2 {
                 text-align: center;
@@ -206,7 +257,6 @@ footer {
                 border-bottom: 1px solid black;
 
                 a {
-
 
                     img {
                         width: 40px;
@@ -230,9 +280,10 @@ footer {
             padding-top: 2vh;
         }
 
-        a{
+        a {
             padding-bottom: 2vh;
-
+            text-decoration: none;
+            color: #232323;
         }
     }
 }
@@ -274,6 +325,18 @@ footer {
                 padding-top: 1.5%;
             }
 
+        }
+    }
+
+    .partenaires {
+
+        .logoPartenaire {
+            div {
+
+                img {
+                    width: 120px;
+                }
+            }
         }
     }
 
@@ -347,6 +410,18 @@ footer {
 
             }
 
+        }
+    }
+
+    .partenaires {
+
+        .logoPartenaire {
+            div {
+
+                img {
+                    width: 140px;
+                }
+            }
         }
     }
 
@@ -435,6 +510,28 @@ footer {
 
             }
 
+        }
+    }
+
+    .partenaires {
+        padding-bottom: 5vh;
+
+        .rowHrTitre{
+
+            h2{
+                font-size: 2.3rem;
+            }
+        }
+
+        .logoPartenaire {
+
+            div {
+                flex: 1 1 33.33%;
+
+                img {
+                    width: 170px;
+                }
+            }
         }
     }
 
@@ -549,11 +646,34 @@ footer {
         }
     }
 
+    .partenaires {
+        margin: 0 10%;
+        justify-content: center;
+
+        .rowHrTitre{
+            
+            h2{
+                font-size: 2.5rem;
+            }
+        }
+
+        .logoPartenaire {
+
+            div {
+                flex: 1 1 25%;
+
+                img {
+                    width: 200px;
+                }
+            }
+        }
+    }
+
     footer {
 
         >div:first-of-type {
 
-    
+
             img {
                 position: absolute;
                 top: -62px;
@@ -564,11 +684,12 @@ footer {
         .containerLinksReseaux {
 
             .footerLinks {
-                h4{
+                h4 {
                     font-size: 1.4rem;
                 }
-                div:nth-of-type(1){
-                    a{
+
+                div:nth-of-type(1) {
+                    a {
                         font-size: 0.9rem;
                     }
                 }
@@ -616,11 +737,35 @@ footer {
         }
     }
 
+    .partenaires {
+        margin: 0 10%;
+        justify-content: center;
+
+        .rowHrTitre{
+
+
+            h2{
+                font-size: 3rem;
+            }
+        }
+
+        .logoPartenaire {
+
+            div {
+                flex: 1 1 25%;
+
+                img {
+                    width: 250px;
+                }
+            }
+        }
+    }
+
     footer {
 
         >div:first-of-type {
 
-    
+
             img {
                 position: absolute;
                 top: -80px;
@@ -633,12 +778,13 @@ footer {
 
             .footerLinks {
 
-                h4{
+                h4 {
                     font-size: 1.4rem;
                 }
-                div:nth-of-type(1){
 
-                    a{
+                div:nth-of-type(1) {
+
+                    a {
                         font-size: 1.1rem;
                     }
                 }
