@@ -11,7 +11,7 @@ ob_start();
 
 </section>
 
-<section class="actualites">
+<section class="actualitesTel">
 
     <div>
         <h2>TOUTES LES <span>ACTUALITÉS</span></h2>
@@ -22,7 +22,7 @@ ob_start();
             <h3>Résultats des français</h3>
             <p>aux mondiaux de penthatlon moderne 2024</p>
         </div>
-        <div class="imageInfo"><img src="public/images/info1.png" alt=""></div>
+        <div class="imageInfo"><img src="public/images/info1.png" alt="photo actu1"></div>
     </div>
 
     <div class="actuRow" data-url="https://olympics.com/fr/infos/championnats-monde-pentathlon-moderne-2024-presentation-selection-francaise-programme-comment-regarder-elodie-clouvel-valentin-belaud-direct">
@@ -30,7 +30,7 @@ ob_start();
             <h3>Présentation</h3>
             <p>mondiaux de penthatlon moderne 2024</p>
         </div>
-        <div class="imageInfo"><img src="public/images/actu2.png" alt=""></div>
+        <div class="imageInfo"><img src="public/images/actu2.png" alt="photo actu2"></div>
     </div>
 
     <div class="actuRow" data-url="https://olympics.com/fr/infos/jo-paris-2024-selection-francaise-liste-complete-athletes-francais-officiellement-selectionnes-direct">
@@ -38,7 +38,7 @@ ob_start();
             <h3>La séléction </h3>
             <p>française pour les JO de paris 2024</p>
         </div>
-        <div class="imageInfo"><img src="public/images/info3.png" alt=""></div>
+        <div class="imageInfo"><img src="public/images/info3.png" alt="photo actu3"></div>
     </div>
 
     <div class="actuRow" data-url="https://olympics.com/fr/infos/a-versailles-le-cheval-est-roi">
@@ -46,8 +46,39 @@ ob_start();
             <h3>Équitation aux JO</h3>
             <p> au château de versailles ,le cheval est roi</p>
         </div>
-        <div class="imageInfo"><img src="public/images/info4.png" alt=""></div>
+        <div class="imageInfo"><img src="public/images/info4.png" alt="photo actu4"></div>
     </div>
+</section>
+
+<section class="actualitesPc">
+
+    <div>
+        <h2>TOUTES LES <span>ACTUALITÉS</span></h2>
+    </div>
+
+    <div class="rowInfo">
+        <div>
+        <h3>Résultats des français</h3>
+        <p>aux mondiaux de penthatlon moderne 2024</p>
+        </div>
+        <div>
+        <h3>Présentation</h3>
+        <p>mondiaux de penthatlon moderne 2024</p>
+        </div>
+    </div>
+
+    <div class="rowInfo2" >
+        <div >
+        <h3>La séléction </h3>
+        <p>française pour les JO de paris 2024</p>
+        </div>
+        <div>
+        <h3>Équitation aux JO</h3>
+        <p> au château de versailles ,le cheval est roi</p>
+        </div>
+    </div>
+
+
 </section>
 
 
