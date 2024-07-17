@@ -144,26 +144,94 @@ footer {
     flex-direction: column;
     background-color: var(--grey);
 
-    .footerColumn {
+    >div:first-of-type {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        position: relative;
+
+        img {
+            position: absolute;
+            top: -25px;
+            width: 40px;
+        }
+    }
+
+    .containerLinksReseaux {
         display: flex;
         flex-direction: column;
-        margin: 5% ;
+        gap: 2vh;
+        align-items: center;
 
         .footerLinks {
             display: flex;
             flex-direction: column;
+            gap: 2vh;
 
-            a:nth-of-type(5){
-                padding-bottom: 3%;
+            h4 {
+                color: #D6C278;
+                padding-top: 2vh;
+                margin-left: -6%;
+            }
+
+            div:nth-of-type(1) {
+                display: flex;
+                gap: 3%;
+                justify-content: flex-start;
+                margin-left: -6%;
+
+                a {
+                    font-size: 0.6rem;
+                }
             }
         }
 
-        .royalties {
-            text-align: center;
+        .reseaux {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 2vh;
+            width: 80%; 
 
-            p:nth-of-type(1){
-                padding-top: 3%;
+            h2 {
+                text-align: center;
+                font-size: 1.2rem;
+                border-top: 1px solid black;
+
             }
+
+            .mesReseaux {
+                display: flex;
+                justify-content: space-evenly;
+                border-bottom: 1px solid black;
+
+                a {
+
+
+                    img {
+                        width: 40px;
+                        height: auto;
+                    }
+                }
+            }
+        }
+    }
+
+    .royalties {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 5%;
+        font-size: 0.7rem;
+        margin: 0 5%;
+
+        p {
+            padding-bottom: 2vh;
+            padding-top: 2vh;
+        }
+
+        a{
+            padding-bottom: 2vh;
 
         }
     }
@@ -181,7 +249,7 @@ footer {
 
                 gap: 4px;
                 width: 1.3rem;
-                
+
             }
 
             .menu {
@@ -197,16 +265,48 @@ footer {
 
             }
 
-            
-        .profil {
 
-            width: 5%;
-            font-size: 1.1rem;
-            cursor: pointer;
-            padding-top: 1.5%;
+            .profil {
+
+                width: 5%;
+                font-size: 1.1rem;
+                cursor: pointer;
+                padding-top: 1.5%;
+            }
+
+        }
+    }
+
+    footer {
+
+        >div:first-of-type {
+
+            img {
+                top: -26px;
+                width: 45px;
+            }
         }
 
+        .containerLinksReseaux {
+
+            .footerLinks {
+
+                h4 {}
+
+                div:nth-of-type(1) {
+
+
+                    a {
+                        font-size: 0.7rem;
+                    }
+                }
+            }
         }
+
+        .royalties {
+            font-size: 0.8rem;
+        }
+
     }
 }
 
@@ -244,8 +344,51 @@ footer {
                 cursor: pointer;
                 padding-top: 1.8%;
 
-    
+
             }
+
+        }
+    }
+
+    footer {
+
+        >div:first-of-type {
+
+            img {
+                top: -30px;
+                width: 50px;
+            }
+        }
+
+        .containerLinksReseaux {
+
+            .footerLinks {
+                display: flex;
+                flex-direction: column;
+                gap: 2vh;
+                margin: 0 5%;
+
+                h4 {
+                    color: #D6C278;
+                    padding-top: 2vh;
+
+                }
+
+                div:nth-of-type(1) {
+                    display: flex;
+                    gap: 3%;
+                    justify-content: flex-start;
+
+                    a {
+                        font-size: 0.8rem;
+                    }
+                }
+            }
+        }
+
+        .royalties {
+
+            font-size: 0.9rem;
 
         }
     }
@@ -263,7 +406,7 @@ footer {
                 gap: 5px;
                 width: 2rem;
 
-                span{
+                span {
                     height: 5px;
                 }
 
@@ -289,9 +432,74 @@ footer {
                 font-size: 1.7rem;
                 cursor: pointer;
                 padding-top: 0;
-    
+
             }
 
+        }
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+
+        >div:first-of-type {
+
+            img {
+                position: absolute;
+                top: -50px;
+                width: 80px;
+            }
+        }
+
+        .containerLinksReseaux {
+            display: flex;
+            flex-direction: row;
+            border-bottom: 1PX solid black;
+            gap: 0px;
+            justify-content: space-around;
+            align-items: center;
+            height: 25vh;
+
+            .footerLinks {
+
+                div:nth-of-type(1) {
+                    flex-direction: column;
+                    gap: 8px;
+                    justify-content: space-between;
+
+                    a {
+                        font-size: 0.8rem;
+                    }
+                }
+            }
+
+            .reseaux {
+
+                width: auto;
+
+                h2 {
+                    font-size: 1.3rem;
+                    border-top: 1px solid black;
+                    padding-top: 1.5vh;
+
+                }
+
+                .mesReseaux {
+                    border-bottom: 1px solid black;
+                    padding-bottom: 1vh;
+                }
+            }
+        }
+
+        .royalties {
+            font-size: 0.8rem;
+            margin: 0 5%;
+
+            p,
+            a {
+                padding-bottom: 2vh;
+                padding-top: 2vh;
+            }
         }
     }
 }
@@ -341,6 +549,53 @@ footer {
         }
     }
 
+    footer {
+
+        >div:first-of-type {
+
+    
+            img {
+                position: absolute;
+                top: -62px;
+                width: 100px;
+            }
+        }
+
+        .containerLinksReseaux {
+
+            .footerLinks {
+                h4{
+                    font-size: 1.4rem;
+                }
+                div:nth-of-type(1){
+                    a{
+                        font-size: 0.9rem;
+                    }
+                }
+            }
+
+            .reseaux {
+
+                h2 {
+                    font-size: 1.5rem;
+                }
+
+                .mesReseaux {
+
+                    a {
+                        img {
+                            width: 50px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .royalties {
+            font-size: 1rem;
+        }
+
+    }
 }
 
 @media only screen and (min-width: 1440px) {
@@ -359,5 +614,56 @@ footer {
                 font-size: 1.2rem;
             }
         }
+    }
+
+    footer {
+
+        >div:first-of-type {
+
+    
+            img {
+                position: absolute;
+                top: -80px;
+                width: 130px;
+            }
+        }
+
+        .containerLinksReseaux {
+            height: 30vh;
+
+            .footerLinks {
+
+                h4{
+                    font-size: 1.4rem;
+                }
+                div:nth-of-type(1){
+
+                    a{
+                        font-size: 1.1rem;
+                    }
+                }
+            }
+
+            .reseaux {
+
+                h2 {
+                    font-size: 1.5rem;
+                }
+
+                .mesReseaux {
+
+                    a {
+                        img {
+                            width: 55px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .royalties {
+            font-size: 1.2rem;
+        }
+
     }
 }

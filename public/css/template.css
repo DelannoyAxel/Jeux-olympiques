@@ -112,23 +112,77 @@ footer {
   flex-direction: column;
   background-color: var(--grey);
 }
-footer .footerColumn {
+footer > div:first-of-type {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+}
+footer > div:first-of-type img {
+  position: absolute;
+  top: -25px;
+  width: 40px;
+}
+footer .containerLinksReseaux {
   display: flex;
   flex-direction: column;
-  margin: 5% ;
+  gap: 2vh;
+  align-items: center;
 }
-footer .footerColumn .footerLinks {
+footer .containerLinksReseaux .footerLinks {
   display: flex;
   flex-direction: column;
+  gap: 2vh;
 }
-footer .footerColumn .footerLinks a:nth-of-type(5) {
-  padding-bottom: 3%;
+footer .containerLinksReseaux .footerLinks h4 {
+  color: #D6C278;
+  padding-top: 2vh;
+  margin-left: -6%;
 }
-footer .footerColumn .royalties {
+footer .containerLinksReseaux .footerLinks div:nth-of-type(1) {
+  display: flex;
+  gap: 3%;
+  justify-content: flex-start;
+  margin-left: -6%;
+}
+footer .containerLinksReseaux .footerLinks div:nth-of-type(1) a {
+  font-size: 0.6rem;
+}
+footer .containerLinksReseaux .reseaux {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2vh;
+  width: 80%;
+}
+footer .containerLinksReseaux .reseaux h2 {
   text-align: center;
+  font-size: 1.2rem;
+  border-top: 1px solid black;
 }
-footer .footerColumn .royalties p:nth-of-type(1) {
-  padding-top: 3%;
+footer .containerLinksReseaux .reseaux .mesReseaux {
+  display: flex;
+  justify-content: space-evenly;
+  border-bottom: 1px solid black;
+}
+footer .containerLinksReseaux .reseaux .mesReseaux a img {
+  width: 40px;
+  height: auto;
+}
+footer .royalties {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5%;
+  font-size: 0.7rem;
+  margin: 0 5%;
+}
+footer .royalties p {
+  padding-bottom: 2vh;
+  padding-top: 2vh;
+}
+footer .royalties a {
+  padding-bottom: 2vh;
 }
 @media only screen and (min-width: 375px) {
   header .navTel .burger {
@@ -149,6 +203,16 @@ footer .footerColumn .royalties p:nth-of-type(1) {
     cursor: pointer;
     padding-top: 1.5%;
   }
+  footer > div:first-of-type img {
+    top: -26px;
+    width: 45px;
+  }
+  footer .containerLinksReseaux .footerLinks div:nth-of-type(1) a {
+    font-size: 0.7rem;
+  }
+  footer .royalties {
+    font-size: 0.8rem;
+  }
 }
 @media only screen and (min-width: 425px) {
   header .navTel .burger {
@@ -168,6 +232,31 @@ footer .footerColumn .royalties p:nth-of-type(1) {
     font-size: 1.25rem;
     cursor: pointer;
     padding-top: 1.8%;
+  }
+  footer > div:first-of-type img {
+    top: -30px;
+    width: 50px;
+  }
+  footer .containerLinksReseaux .footerLinks {
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    margin: 0 5%;
+  }
+  footer .containerLinksReseaux .footerLinks h4 {
+    color: #D6C278;
+    padding-top: 2vh;
+  }
+  footer .containerLinksReseaux .footerLinks div:nth-of-type(1) {
+    display: flex;
+    gap: 3%;
+    justify-content: flex-start;
+  }
+  footer .containerLinksReseaux .footerLinks div:nth-of-type(1) a {
+    font-size: 0.8rem;
+  }
+  footer .royalties {
+    font-size: 0.9rem;
   }
 }
 @media only screen and (min-width: 768px) {
@@ -191,6 +280,53 @@ footer .footerColumn .royalties p:nth-of-type(1) {
     font-size: 1.7rem;
     cursor: pointer;
     padding-top: 0;
+  }
+  footer {
+    display: flex;
+    flex-direction: column;
+  }
+  footer > div:first-of-type img {
+    position: absolute;
+    top: -50px;
+    width: 80px;
+  }
+  footer .containerLinksReseaux {
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1PX solid black;
+    gap: 0px;
+    justify-content: space-around;
+    align-items: center;
+    height: 25vh;
+  }
+  footer .containerLinksReseaux .footerLinks div:nth-of-type(1) {
+    flex-direction: column;
+    gap: 8px;
+    justify-content: space-between;
+  }
+  footer .containerLinksReseaux .footerLinks div:nth-of-type(1) a {
+    font-size: 0.8rem;
+  }
+  footer .containerLinksReseaux .reseaux {
+    width: auto;
+  }
+  footer .containerLinksReseaux .reseaux h2 {
+    font-size: 1.3rem;
+    border-top: 1px solid black;
+    padding-top: 1.5vh;
+  }
+  footer .containerLinksReseaux .reseaux .mesReseaux {
+    border-bottom: 1px solid black;
+    padding-bottom: 1vh;
+  }
+  footer .royalties {
+    font-size: 0.8rem;
+    margin: 0 5%;
+  }
+  footer .royalties p,
+  footer .royalties a {
+    padding-bottom: 2vh;
+    padding-top: 2vh;
   }
 }
 @media only screen and (min-width: 1024px) {
@@ -230,12 +366,55 @@ footer .footerColumn .royalties p:nth-of-type(1) {
     width: 17vw;
     height: 4vh;
   }
+  footer > div:first-of-type img {
+    position: absolute;
+    top: -62px;
+    width: 100px;
+  }
+  footer .containerLinksReseaux .footerLinks h4 {
+    font-size: 1.4rem;
+  }
+  footer .containerLinksReseaux .footerLinks div:nth-of-type(1) a {
+    font-size: 0.9rem;
+  }
+  footer .containerLinksReseaux .reseaux h2 {
+    font-size: 1.5rem;
+  }
+  footer .containerLinksReseaux .reseaux .mesReseaux a img {
+    width: 50px;
+  }
+  footer .royalties {
+    font-size: 1rem;
+  }
 }
 @media only screen and (min-width: 1440px) {
   header .navTel {
     display: none;
   }
   header .navPc a {
+    font-size: 1.2rem;
+  }
+  footer > div:first-of-type img {
+    position: absolute;
+    top: -80px;
+    width: 130px;
+  }
+  footer .containerLinksReseaux {
+    height: 30vh;
+  }
+  footer .containerLinksReseaux .footerLinks h4 {
+    font-size: 1.4rem;
+  }
+  footer .containerLinksReseaux .footerLinks div:nth-of-type(1) a {
+    font-size: 1.1rem;
+  }
+  footer .containerLinksReseaux .reseaux h2 {
+    font-size: 1.5rem;
+  }
+  footer .containerLinksReseaux .reseaux .mesReseaux a img {
+    width: 55px;
+  }
+  footer .royalties {
     font-size: 1.2rem;
   }
 }

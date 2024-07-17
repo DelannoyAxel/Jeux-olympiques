@@ -75,28 +75,36 @@ if (session_status() == PHP_SESSION_NONE) {
         </div>
 
         <div class="containerLinksReseaux">
-            
+
             <div class="footerLinks">
                 <h4>Jeux Olympiques</h4>
-                <a href="index.php">ACTUALITÉS</a>
-                <a href="classement.php">HISTOIRE</a>
-                <a href="#">EPREUVES</a>
-                <a href="#">BILLETERIE</a>
-                <a href="#">CLASSEMENT</a>
+                <div>
+                    <a href="index.php">ACTUALITÉS</a>
+                    <a href="classement.php">HISTOIRE</a>
+                    <a href="#">EPREUVES</a>
+                    <a href="#">BILLETERIE</a>
+                    <a href="#">CLASSEMENT</a>
+                </div>
             </div>
+
 
             <div class="reseaux">
-                <h2>ON RESTE EN CONTACT ?</h2>
-                <div><a href="public/images/github.svg"></a></div>
-                <div><a href="public/images/discord.svg"></a></div>
-                <div><a href="public/images/linkedin.svg"></a></div>
+                <div>
+                    <h2>ON RESTE EN CONTACT ?</h2>
+                </div>
+                <div class="mesReseaux">
+                    <div><a href="https://github.com/DelannoyAxel" target="_blank"><img src="public/images/github.svg" alt="GitHub"></a></div>
+                    <div><a href="https://discordapp.com/users/325593412336353280" target="_blank"><img src="public/images/discord.svg" alt="Discord"></a></div>
+                    <div><a href="https://www.linkedin.com/in/axel-delannoy-b1b0a6262/" target="_blank"><img src="public/images/linkedin.svg" alt="LinkedIn"></a></div>
+                </div>
             </div>
         </div>
+     
+
 
         <div class="royalties">
-            <hr>
             <p>Par Royalties — https://www.paris2024.org/fr/</p>
-            <a href="">Mentiosn légals</a>
+            <a href="">Mentions légals</a>
             <a href="">Plan du site</a>
             <a href="">Politique des cookies</a>
         </div>
