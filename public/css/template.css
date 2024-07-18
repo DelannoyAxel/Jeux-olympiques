@@ -157,8 +157,8 @@ footer > div:first-of-type {
 }
 footer > div:first-of-type img {
   position: absolute;
-  top: -25px;
-  width: 40px;
+  top: -35px;
+  width: 55px;
 }
 footer .containerLinksReseaux {
   display: flex;
@@ -248,8 +248,8 @@ footer .royalties a {
     width: 120px;
   }
   footer > div:first-of-type img {
-    top: -26px;
-    width: 45px;
+    top: -40px;
+    width: 65px;
   }
   footer .containerLinksReseaux .footerLinks div:nth-of-type(1) a {
     font-size: 0.7rem;
@@ -281,8 +281,8 @@ footer .royalties a {
     width: 140px;
   }
   footer > div:first-of-type img {
-    top: -30px;
-    width: 50px;
+    top: -45px;
+    width: 75px;
   }
   footer .containerLinksReseaux .footerLinks {
     display: flex;
@@ -346,8 +346,8 @@ footer .royalties a {
   }
   footer > div:first-of-type img {
     position: absolute;
-    top: -50px;
-    width: 80px;
+    top: -55px;
+    width: 90px;
   }
   footer .containerLinksReseaux {
     display: flex;

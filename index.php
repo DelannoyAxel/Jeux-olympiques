@@ -130,8 +130,8 @@ ob_start();
         </div>
     </div>
 
-    <div class="box" id="boxLaser">
-        <div class="imgBox">
+    <div class="box" >
+        <div class="imgBox" id="boxLaser">
             <img src="public/images/laserrunepreuve.png" alt="photo d'epreuve laser run">
         </div>
         <div class="content">
