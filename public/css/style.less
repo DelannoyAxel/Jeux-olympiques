@@ -350,19 +350,22 @@
             gap: 2%;
             padding-bottom: 2%;
             height: 250px;
-    
-    
-            >div:nth-child(1) {
-                background-image: url('/public/images/info1.png');
-                flex: 1 1 69%;
+
+            > div {
                 background-size: cover;
                 position: relative;
                 display: flex;
                 flex-direction: column;
                 justify-content: flex-end;
                 gap: 4%;
+                cursor: pointer;
+            }
     
     
+            >div:nth-child(1) {
+                background-image: url('/public/images/info1.png');
+                flex: 1 1 69%;
+
                 &::before {
                     .overlay();
                 }
@@ -372,15 +375,7 @@
             >div:nth-child(2) {
                 flex: 1 1 29%;
                 background-image: url('/public/images/actu2.png');
-                background-size: cover;
                 background-position-x: 45%;
-                position: relative;
-                display: flex;
-                flex-direction: column;
-                justify-content: flex-end;
-                gap: 4%;
-    
-    
     
                 &::before {
                     .overlay();
@@ -392,18 +387,21 @@
             display: flex;
             gap: 2%;
             height: 250px;
-    
-            >div:nth-child(1) {
-                background-image: url('/public/images/info3.png');
-                flex: 1 1 29%;
+
+            >div{
                 background-size: cover;
                 position: relative;
                 display: flex;
                 flex-direction: column;
                 justify-content: flex-end;
                 gap: 4%;
+                cursor: pointer;
+            }
     
-    
+            >div:nth-child(1) {
+                background-image: url('/public/images/info3.png');
+                flex: 1 1 29%;
+
                 &::before {
                     .overlay();
                 }
@@ -413,16 +411,8 @@
             >div:nth-child(2) {
                 flex: 1 1 69%;
                 background-image: url('/public/images/info4.png');
-                background-size: cover;
                 background-position-x: 45%;
-                background-position-y: 80%;
-                position: relative;
-                display: flex;
-                flex-direction: column;
-                justify-content: flex-end;
-                gap: 4%;
-    
-    
+                background-position-y: 40% ;
                 &::before {
                     .overlay();
                 }

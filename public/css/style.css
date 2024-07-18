@@ -221,15 +221,18 @@
     padding-bottom: 2%;
     height: 250px;
   }
-  .actualitesPc .rowInfo > div:nth-child(1) {
-    background-image: url('/public/images/info1.png');
-    flex: 1 1 69%;
+  .actualitesPc .rowInfo > div {
     background-size: cover;
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     gap: 4%;
+    cursor: pointer;
+  }
+  .actualitesPc .rowInfo > div:nth-child(1) {
+    background-image: url('/public/images/info1.png');
+    flex: 1 1 69%;
   }
   .actualitesPc .rowInfo > div:nth-child(1)::before {
     content: '';
@@ -244,13 +247,7 @@
   .actualitesPc .rowInfo > div:nth-child(2) {
     flex: 1 1 29%;
     background-image: url('/public/images/actu2.png');
-    background-size: cover;
     background-position-x: 45%;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    gap: 4%;
   }
   .actualitesPc .rowInfo > div:nth-child(2)::before {
     content: '';
@@ -267,15 +264,18 @@
     gap: 2%;
     height: 250px;
   }
-  .actualitesPc .rowInfo2 > div:nth-child(1) {
-    background-image: url('/public/images/info3.png');
-    flex: 1 1 29%;
+  .actualitesPc .rowInfo2 > div {
     background-size: cover;
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     gap: 4%;
+    cursor: pointer;
+  }
+  .actualitesPc .rowInfo2 > div:nth-child(1) {
+    background-image: url('/public/images/info3.png');
+    flex: 1 1 29%;
   }
   .actualitesPc .rowInfo2 > div:nth-child(1)::before {
     content: '';
@@ -290,14 +290,8 @@
   .actualitesPc .rowInfo2 > div:nth-child(2) {
     flex: 1 1 69%;
     background-image: url('/public/images/info4.png');
-    background-size: cover;
     background-position-x: 45%;
-    background-position-y: 80%;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    gap: 4%;
+    background-position-y: 40% ;
   }
   .actualitesPc .rowInfo2 > div:nth-child(2)::before {
     content: '';

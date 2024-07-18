@@ -74,7 +74,7 @@ ob_start();
         </div>
         <div>
         <h3>Équitation aux JO</h3>
-        <p> au château de versailles ,le cheval est roi</p>
+        <p> au château de versailles, le cheval est roi</p>
         </div>
     </div>
 
