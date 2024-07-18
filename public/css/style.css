@@ -85,6 +85,108 @@
 .actualitesPc {
   display: none;
 }
+.histoire {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--grey);
+  padding: 0 5%;
+}
+.histoire > :first-child {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.histoire > :first-child h2 {
+  padding-top: 10%;
+  padding-bottom: 10%;
+  font-size: 1.2rem;
+  font-family: "Fira Sans", sans-serif;
+}
+.histoire > :first-child h2 span {
+  color: #D6C278;
+}
+.histoire > :first-child p {
+  font-size: 0.9rem;
+}
+.histoire > :last-child {
+  display: flex;
+  justify-content: center;
+  padding: 5%;
+}
+.histoire > :last-child img {
+  width: 250px;
+}
+.containerEpreuves {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: var(--darkGrey);
+  padding: 10% 5%;
+  gap: 3vh;
+}
+.containerEpreuves > div:nth-child(1) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.containerEpreuves > div:nth-child(1) h2 {
+  color: var(--gold);
+  text-transform: uppercase;
+  font-family: "Fira Sans", sans-serif;
+}
+.containerEpreuves .box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: height 0.5s;
+  overflow: hidden;
+  border-radius: 5px;
+}
+.containerEpreuves .box .imgBox {
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.5s;
+  overflow: hidden;
+}
+.containerEpreuves .box .imgBox img {
+  width: 100%;
+  height: 100%;
+  opacity: 0.7;
+  transition: opacity 0.5s;
+  transition: transform 0.3s ease;
+  object-fit: cover;
+}
+.containerEpreuves .box .imgBox:hover img {
+  opacity: 1;
+  transform: scale(1.1);
+  padding-bottom: 2vh;
+}
+.containerEpreuves .box .content {
+  width: 100%;
+  max-height: 0;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: max-height 1s, opacity 0.5s;
+  margin: 0 5%;
+}
+.containerEpreuves .box .content p {
+  font-size: 0.9rem;
+  color: white;
+  margin: 10px;
+}
+.containerEpreuves .box:hover .content {
+  max-height: 500px;
+  opacity: 1;
+  margin: 0 5%;
+}
 @media only screen and (min-width: 375px) {
   .hero {
     height: 55vh;
@@ -123,7 +225,6 @@
   }
   .actualitesTel > div:nth-of-type(1) h2 {
     font-size: 1.5rem;
-    font-family: "Fira Sans", sans-serif;
   }
   .actualitesTel .actuRow .actu h3 {
     font-size: 1.1rem;
@@ -133,6 +234,12 @@
   }
   .actualitesTel .actuRow .imageInfo img {
     width: 115px;
+  }
+  .histoire > :first-child h2 {
+    font-size: 1.5rem;
+  }
+  .histoire > :last-child img {
+    width: 275px;
   }
 }
 @media only screen and (min-width: 768px) {
@@ -153,7 +260,6 @@
   }
   .actualitesTel > div:nth-of-type(1) h2 {
     font-size: 2rem;
-    font-family: "Fira Sans", sans-serif;
   }
   .actualitesTel .actuRow .actu h3 {
     font-size: 1.5rem;
@@ -163,6 +269,37 @@
   }
   .actualitesTel .actuRow .imageInfo img {
     width: 200px;
+  }
+  .histoire {
+    padding: 0 10%;
+  }
+  .histoire > :first-child h2 {
+    font-size: 2rem;
+  }
+  .histoire > :first-child p {
+    font-size: 1.3rem;
+  }
+  .histoire > :last-child img {
+    width: 400px;
+  }
+  .containerEpreuves {
+    padding: 5%;
+  }
+  .containerEpreuves > div:nth-child(1) {
+    width: 100%;
+    padding-bottom: 5%;
+  }
+  .containerEpreuves > div:nth-child(1) h2 {
+    font-size: 1.8rem;
+  }
+  .containerEpreuves .box {
+    max-width: 40vw;
+  }
+  .containerEpreuves .box .content p {
+    font-size: 1rem;
+  }
+  .containerEpreuves .box:hover .content {
+    max-height: 500px;
   }
 }
 @media only screen and (min-width: 1024px) {
@@ -210,7 +347,6 @@
   }
   .actualitesPc > div:nth-of-type(1) h2 {
     font-size: 2rem;
-    font-family: "Fira Sans", sans-serif;
   }
   .actualitesPc > div:nth-of-type(1) h2 span {
     color: #D6C278;
@@ -291,7 +427,7 @@
     flex: 1 1 69%;
     background-image: url('/public/images/info4.png');
     background-position-x: 45%;
-    background-position-y: 40% ;
+    background-position-y: 40%;
   }
   .actualitesPc .rowInfo2 > div:nth-child(2)::before {
     content: '';
@@ -302,6 +438,52 @@
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.3);
     z-index: 1;
+  }
+  .histoire {
+    margin-top: 5%;
+    padding: 0 5% 5% 5%;
+    flex-direction: row;
+  }
+  .histoire > :first-child {
+    display: flex;
+    align-items: flex-start;
+  }
+  .histoire > :first-child h2 {
+    font-size: 2rem;
+  }
+  .histoire > :first-child p {
+    font-size: 1.3rem;
+  }
+  .histoire > :last-child img {
+    width: 400px;
+  }
+  .containerEpreuves {
+    padding: 5%;
+  }
+  .containerEpreuves > div:nth-child(1) {
+    width: 100%;
+    padding-bottom: 5%;
+  }
+  .containerEpreuves > div:nth-child(1) h2 {
+    font-size: 1.8rem;
+  }
+  .containerEpreuves .box {
+    max-width: 40vw;
+  }
+  .containerEpreuves .box .imgBox {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 30vh;
+  }
+  .containerEpreuves .box .content p {
+    font-size: 1rem;
+  }
+  .containerEpreuves .box:hover .content {
+    max-height: 500px;
+  }
+  .containerEpreuves .box #equitationBox img {
+    height: 35vh;
   }
 }
 @media only screen and (min-width: 1440px) {
@@ -319,5 +501,51 @@
     font-size: 6rem;
     padding-top: 7.5%;
     letter-spacing: 5px;
+  }
+  .actualitesPc > div:nth-of-type(1) h2 {
+    font-size: 2.5rem;
+  }
+  .histoire {
+    margin-top: 5%;
+    padding: 0 5% 5% 5%;
+    flex-direction: row;
+  }
+  .histoire > :first-child {
+    display: flex;
+    align-items: flex-start;
+  }
+  .histoire > :first-child h2 {
+    font-size: 2.5rem;
+  }
+  .histoire > :first-child p {
+    font-size: 1.5rem;
+  }
+  .histoire > :last-child img {
+    width: 400px;
+  }
+  .containerEpreuves {
+    padding: 5%;
+  }
+  .containerEpreuves > div:nth-child(1) {
+    width: 100%;
+    padding-bottom: 5%;
+  }
+  .containerEpreuves > div:nth-child(1) h2 {
+    font-size: 1.8rem;
+  }
+  .containerEpreuves .box {
+    max-width: 40vw;
+  }
+  .containerEpreuves .box .imgBox {
+    height: 35vh;
+  }
+  .containerEpreuves .box .content p {
+    font-size: 1rem;
+  }
+  .containerEpreuves .box:hover .content {
+    max-height: 500px;
+  }
+  .containerEpreuves .box #equitationBox img {
+    height: 60vh;
   }
 }
