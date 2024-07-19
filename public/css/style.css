@@ -109,6 +109,7 @@
 }
 .histoire > :first-child p {
   font-size: 0.9rem;
+  line-height: 20px;
 }
 .histoire > :last-child {
   display: flex;
@@ -189,6 +190,122 @@
   opacity: 1;
   margin: 0 5%;
 }
+.derouleEpreuves {
+  display: flex;
+  flex-direction: column;
+  padding: 5%;
+  margin-bottom: 2%;
+  gap: 2vh;
+}
+.derouleEpreuves h2 {
+  color: var(--darkGrey);
+  font-size: 1.2rem;
+  text-align: center;
+  font-family: "Fira Sans", sans-serif;
+  text-transform: uppercase;
+}
+.derouleEpreuves h2 span {
+  color: var(--gold);
+}
+.derouleEpreuves p {
+  font-size: 0.8rem;
+  line-height: 20px;
+}
+.transitionImage {
+  overflow: hidden;
+  height: auto;
+}
+.transitionImage .imgTransition img {
+  height: 150px;
+  width: 100%;
+}
+.billetterie {
+  display: flex;
+  flex-direction: column;
+  padding: 5%;
+  overflow: hidden;
+}
+.billetterie > div:nth-child(1) {
+  display: flex;
+  justify-content: center;
+}
+.billetterie > div:nth-child(1) h2 {
+  margin: 10% 0 15% 0;
+}
+.billetterie > div:nth-child(1) h2 span {
+  color: var(--gold);
+}
+.billetterie .allCard {
+  display: flex;
+  overflow: auto ;
+  gap: 75px;
+  padding-bottom: 5%;
+}
+.billetterie .allCard .card {
+  margin: 0 10%;
+  display: flex;
+  flex-direction: column;
+}
+.billetterie .allCard .card .titre-card {
+  background-color: var(--darkGrey);
+  display: flex;
+  width: 175%;
+  justify-content: center;
+  align-items: center;
+  height: 7.5vh;
+  border-radius: 10px 10px 0 0;
+}
+.billetterie .allCard .card .titre-card h3 {
+  color: var(--white);
+}
+.billetterie .allCard .card .body-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--grey);
+  padding: 10% 5%;
+  gap: 3vh;
+  border-radius: 0 0 10px 10px;
+  width: 175%;
+}
+.billetterie .allCard .card .lieu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.billetterie .allCard .card .lieu p {
+  text-align: center;
+}
+.billetterie .allCard .card .pays {
+  font-size: 1.2rem;
+  font-weight: bold;
+  font-style: italic;
+  text-align: center;
+}
+.billetterie .allCard .card .oposition {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15%;
+}
+.billetterie .allCard .card .oposition img {
+  width: 50px;
+}
+.billetterie .allCard .card .oposition h3 {
+  height: auto;
+}
+.billetterie .allCard .card .bouton-reservation {
+  width: 65%;
+  height: 5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--gold);
+  border-radius: 25px;
+}
+.billetterie .allCard .card .bouton-reservation p {
+  font-weight: bold;
+}
 @media only screen and (min-width: 375px) {
   .hero {
     height: 55vh;
@@ -207,6 +324,9 @@
   }
   .actualitesTel .actuRow .imageInfo img {
     width: 100px;
+  }
+  .transitionImage .imgTransition img {
+    height: 150px;
   }
 }
 @media only screen and (min-width: 425px) {
@@ -243,6 +363,15 @@
   .histoire > :last-child img {
     width: 275px;
   }
+  .derouleEpreuves h2 {
+    font-size: 1.5rem;
+  }
+  .derouleEpreuves p {
+    font-size: 0.9rem;
+  }
+  .transitionImage .imgTransition img {
+    height: 180px;
+  }
 }
 @media only screen and (min-width: 768px) {
   .hero {
@@ -277,9 +406,11 @@
   }
   .histoire > :first-child h2 {
     font-size: 2rem;
+    padding: 5% 0;
   }
   .histoire > :first-child p {
     font-size: 1.3rem;
+    line-height: 28px;
   }
   .histoire > :last-child img {
     width: 400px;
@@ -302,6 +433,19 @@
   }
   .containerEpreuves .box:hover .content {
     max-height: 500px;
+  }
+  .derouleEpreuves {
+    padding: 5% 10%;
+  }
+  .derouleEpreuves h2 {
+    font-size: 2rem;
+  }
+  .derouleEpreuves p {
+    font-size: 1.3rem;
+    line-height: 28px;
+  }
+  .transitionImage .imgTransition img {
+    height: 250px;
   }
 }
 @media only screen and (min-width: 1024px) {
@@ -451,12 +595,6 @@
     display: flex;
     align-items: flex-start;
   }
-  .histoire > :first-child h2 {
-    font-size: 2rem;
-  }
-  .histoire > :first-child p {
-    font-size: 1.3rem;
-  }
   .histoire > :last-child img {
     width: 400px;
   }
@@ -486,6 +624,9 @@
   }
   .containerEpreuves .box #equitationBox img {
     height: 35vh;
+  }
+  .transitionImage .imgTransition img {
+    height: 350px;
   }
 }
 @media only screen and (min-width: 1440px) {
@@ -530,6 +671,7 @@
   }
   .histoire > :first-child p {
     font-size: 1.5rem;
+    line-height: 34px;
   }
   .histoire > :last-child img {
     width: 400px;
@@ -568,5 +710,18 @@
   }
   .containerEpreuves .box #boxLaser img {
     object-position: bottom;
+  }
+  .derouleEpreuves {
+    padding: 5% 10%;
+  }
+  .derouleEpreuves h2 {
+    font-size: 2.5rem;
+  }
+  .derouleEpreuves p {
+    font-size: 1.5rem;
+    line-height: 34px;
+  }
+  .transitionImage .imgTransition img {
+    height: 550px;
   }
 }

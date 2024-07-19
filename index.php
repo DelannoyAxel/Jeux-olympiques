@@ -99,7 +99,7 @@ ob_start();
 <section class="containerEpreuves">
 
     <div>
-        <h2>Plongez au coeur des épreuves</span></h2>
+        <h2>Plongez au coeur des épreuves</h2>
     </div>
 
 
@@ -130,7 +130,7 @@ ob_start();
         </div>
     </div>
 
-    <div class="box" >
+    <div class="box">
         <div class="imgBox" id="boxLaser">
             <img src="public/images/laserrunepreuve.png" alt="photo d'epreuve laser run">
         </div>
@@ -139,6 +139,123 @@ ob_start();
         </div>
     </div>
 
+</section>
+
+<section class="derouleEpreuves">
+
+    <h2>Déroulé des <span>épreuves</span></h2>
+    <p>Le pentathlon moderne se dispute en deux temps ; premièrement, les athlètes marquent des points en fonction de leur classement lors des épreuves d’escrime, d’équitation et de natation, qui conditionnent leur ordre de départ lors du laser-run. Lors du laser-run, les athlètes partent avec un retard correspondant au nombre de points d’écart qu’ils ont avec le leader du classement. Le premier athlète à franchir la ligne d’arrivée du laser run remporte la médaille d’or. Du fait de la diversité des épreuves qui le composent, le pentathlon moderne est un sport extrêmement exigeant, qui requiert aux athlètes une grande force mentale et physique, ainsi qu’une polyvalence hors du commun.</p>
+
+</section>
+
+<section class="transitionImage">
+
+    <div class="imgTransition">
+        <img src="public/images/paralax-transformed.png" alt="">
+    </div>
+
+</section>
+
+<section class="billetterie">
+    <div>
+        <h2>L'ESPACE <span>BILLETTERIE</span></h2>
+    </div>
+
+
+    <div class="allCard">
+        <div class="card">
+
+            <div class="titre-card">
+                <h3>Homme</h3>
+            </div>
+
+            <div class="body-card">
+                <div class="date">
+                    <p>jeudi 11 juillet 2024 à 21h15</p>
+                </div>
+
+                <div class="lieu">
+                    <p>Saint-Denis Stade de France</p>
+                </div>
+
+                <div class="pays">
+                    FRANCE <br> JAPON
+                </div>
+
+                <div class="oposition">
+                    <div class="pays1"><img src="public/images/franceDrap.svg" alt="drapeau français"></div>
+                    <h3>VS</h3>
+                    <div class="pays2"><img src="public/images/japonDrap.svg" alt="drapeau japon"></div>
+                </div>
+
+                <div class="bouton-reservation">
+                    <p>JE RÉSERVE</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+
+            <div class="titre-card">
+                <h3>FEMME</h3>
+            </div>
+
+            <div class="body-card">
+                <div class="date">
+                    <p>jeudi 11 juillet 2024 à 21h15</p>
+                </div>
+
+                <div class="lieu">
+                    <p>Saint-Denis Stade de France</p>
+                </div>
+
+                <div class="pays">
+                    FRANCE <br> JAPON
+                </div>
+
+                <div class="oposition">
+                    <div class="pays1"><img src="public/images/franceDrap.svg" alt="drapeau français"></div>
+                    <h3>VS</h3>
+                    <div class="pays2"><img src="public/images/japonDrap.svg" alt="drapeau japon"></div>
+                </div>
+
+                <div class="bouton-reservation">
+                    <p>JE RÉSERVE</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+
+            <div class="titre-card">
+                <h3>Homme</h3>
+            </div>
+
+            <div class="body-card">
+                <div class="date">
+                    <p>jeudi 11 juillet 2024 à 21h15</p>
+                </div>
+
+                <div class="lieu">
+                    <p>Saint-Denis Stade de France</p>
+                </div>
+
+                <div class="pays">
+                    FRANCE <br> JAPON
+                </div>
+
+                <div class="oposition">
+                    <div class="pays1"><img src="public/images/franceDrap.svg" alt="drapeau français"></div>
+                    <h3>VS</h3>
+                    <div class="pays2"><img src="public/images/japonDrap.svg" alt="drapeau japon"></div>
+                </div>
+
+                <div class="bouton-reservation">
+                    <p>JE RÉSERVE</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 
 

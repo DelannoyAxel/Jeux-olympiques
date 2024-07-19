@@ -131,6 +131,7 @@
             font-size: 1.2rem;
             font-family: "Fira Sans", sans-serif;
 
+
             span {
                 color: #D6C278;
             }
@@ -138,6 +139,7 @@
 
         p {
             font-size: 0.9rem;
+            line-height: 20px;
 
         }
 
@@ -241,6 +243,165 @@
     }
 }
 
+.derouleEpreuves {
+
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+    margin-bottom: 2%;
+    gap: 2vh;
+    // background-color: var(--grey);
+
+
+    h2 {
+        color: var(--darkGrey);
+        font-size: 1.2rem;
+        text-align: center;
+        font-family: "Fira Sans", sans-serif;
+        text-transform: uppercase;
+
+
+
+        span {
+            color: var(--gold);
+        }
+    }
+
+    p {
+        font-size: 0.8rem;
+        line-height: 20px;
+    }
+}
+
+.transitionImage {
+    overflow: hidden;
+    height: auto;
+
+    .imgTransition {
+
+        img {
+            height: 150px;
+            width: 100%;
+        }
+    }
+
+}
+
+.billetterie {
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+    overflow: hidden;
+
+    >div:nth-child(1) {
+
+        display: flex;
+        justify-content: center;
+
+        h2 {
+            margin: 10% 0 15% 0;
+
+            span {
+                color: var(--gold);
+            }
+        }
+    }
+
+    .allCard {
+        display: flex;
+        overflow: auto ;
+        gap: 75px;
+        padding-bottom: 5%;
+
+
+
+        .card {
+            margin: 0 10%;
+            display: flex;
+            flex-direction: column;
+
+            .titre-card {
+                background-color: var(--darkGrey);
+                display: flex;
+                width: 175%;
+                justify-content: center;
+                align-items: center;
+                height: 7.5vh;
+                border-radius: 10px 10px 0 0;
+
+
+
+                h3 {
+                    color: var(--white);
+                }
+
+            }
+
+            .body-card {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                background-color: var(--grey);
+                padding: 10% 5%;
+                gap: 3vh;
+                border-radius: 0 0 10px 10px;
+                width: 175%;
+
+
+            }
+
+            .lieu{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                p{
+                    text-align: center;
+                }
+            }
+
+            .pays {
+                font-size: 1.2rem;
+                font-weight: bold;
+                font-style: italic;
+                text-align: center;
+            }
+
+            .oposition {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 15%;
+
+                img {
+                    width: 50px;
+                }
+
+                h3 {
+                    height: auto;
+                }
+            }
+
+            .bouton-reservation {
+                width: 65%;
+                height: 5vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: var(--gold);
+                border-radius: 25px;
+
+                p {
+                    font-weight: bold;
+                }
+            }
+
+        }
+
+    }
+
+}
+
 
 
 
@@ -278,6 +439,17 @@
                 }
             }
         }
+    }
+
+    .transitionImage {
+
+        .imgTransition {
+
+            img {
+                height: 150px;
+            }
+        }
+
     }
 
 }
@@ -352,6 +524,29 @@
         }
 
     }
+
+    .derouleEpreuves {
+
+        h2 {
+            font-size: 1.5rem;
+
+        }
+
+        p {
+            font-size: 0.9rem;
+        }
+    }
+
+    .transitionImage {
+
+        .imgTransition {
+
+            img {
+                height: 180px;
+            }
+        }
+
+    }
 }
 
 @media only screen and (min-width: 768px) {
@@ -417,10 +612,13 @@
 
             h2 {
                 font-size: 2rem;
+                padding: 5% 0;
             }
 
             p {
                 font-size: 1.3rem;
+                line-height: 28px;
+
             }
         }
 
@@ -460,6 +658,34 @@
             }
 
         }
+    }
+
+    .derouleEpreuves {
+
+        padding: 5% 10%;
+
+
+        h2 {
+            font-size: 2rem;
+
+        }
+
+        p {
+            font-size: 1.3rem;
+            line-height: 28px;
+
+        }
+    }
+
+    .transitionImage {
+
+        .imgTransition {
+
+            img {
+                height: 250px;
+            }
+        }
+
     }
 }
 
@@ -630,14 +856,6 @@
         >:first-child {
             display: flex;
             align-items: flex-start;
-
-            h2 {
-                font-size: 2rem;
-            }
-
-            p {
-                font-size: 1.3rem;
-            }
         }
 
         >:last-child {
@@ -693,6 +911,16 @@
 
         }
     }
+
+    .transitionImage {
+
+        .imgTransition {
+
+            img {
+                height: 350px;
+            }
+        }
+    }
 }
 
 
@@ -727,15 +955,15 @@
             }
         }
 
-        .rowInfo{
+        .rowInfo {
             height: 300px;
-            
-            >div:nth-child(1){
+
+            >div:nth-child(1) {
                 background-position-y: 50%;
             }
         }
 
-        .rowInfo2{
+        .rowInfo2 {
             height: 300px;
 
         }
@@ -759,6 +987,8 @@
 
             p {
                 font-size: 1.5rem;
+                line-height: 34px;
+
             }
         }
 
@@ -824,6 +1054,32 @@
                 }
             }
 
+        }
+    }
+
+    .derouleEpreuves {
+
+        padding: 5% 10%;
+
+
+        h2 {
+            font-size: 2.5rem;
+
+        }
+
+        p {
+            font-size: 1.5rem;
+            line-height: 34px;
+        }
+    }
+
+    .transitionImage {
+
+        .imgTransition {
+
+            img {
+                height: 550px;
+            }
         }
     }
 }
