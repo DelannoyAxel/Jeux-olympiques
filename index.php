@@ -197,7 +197,7 @@ ob_start();
         <div class="card">
 
             <div class="titre-card">
-                <h3>FEMME</h3>
+                <h3>Femme</h3>
             </div>
 
             <div class="body-card">

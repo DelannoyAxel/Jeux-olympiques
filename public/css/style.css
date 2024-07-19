@@ -237,7 +237,7 @@
 }
 .billetterie .allCard {
   display: flex;
-  overflow: auto ;
+  overflow: auto;
   gap: 75px;
   padding-bottom: 5%;
 }
@@ -447,6 +447,51 @@
   .transitionImage .imgTransition img {
     height: 250px;
   }
+  .billetterie > div:nth-child(1) h2 {
+    margin: 3% 0 15% 0;
+    font-size: 2rem;
+  }
+  .billetterie .allCard {
+    gap: 60px;
+    padding-bottom: 5%;
+  }
+  .billetterie .allCard .card {
+    margin: 0 10%;
+  }
+  .billetterie .allCard .card .titre-card {
+    width: 200%;
+  }
+  .billetterie .allCard .card .titre-card h3 {
+    font-size: 1.4rem;
+  }
+  .billetterie .allCard .card .body-card {
+    padding: 10% 5% 20% 0;
+    width: 200%;
+    font-size: 1.2rem;
+    gap: 4vh;
+  }
+  .billetterie .allCard .card .pays {
+    font-size: 1.4rem;
+  }
+  .billetterie .allCard .card .oposition {
+    gap: 15%;
+  }
+  .billetterie .allCard .card .oposition img {
+    width: 65px;
+  }
+  .billetterie .allCard .card .bouton-reservation {
+    width: 65%;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--gold);
+    border-radius: 25px;
+  }
+  .billetterie .allCard .card .bouton-reservation p {
+    font-weight: bold;
+    font-size: 1rem;
+  }
 }
 @media only screen and (min-width: 1024px) {
   .hero {
@@ -625,8 +670,47 @@
   .containerEpreuves .box #equitationBox img {
     height: 35vh;
   }
+  .derouleEpreuves {
+    gap: 4vh;
+    padding: 5% 7.5%;
+  }
   .transitionImage .imgTransition img {
     height: 350px;
+  }
+  .billetterie > div:nth-child(1) h2 {
+    margin: 0 0 15% 0;
+    font-size: 2rem;
+  }
+  .billetterie .allCard {
+    gap: 60px;
+    padding-bottom: 5%;
+  }
+  .billetterie .allCard .card {
+    margin: 0 10%;
+  }
+  .billetterie .allCard .card .titre-card {
+    width: 200%;
+  }
+  .billetterie .allCard .card .titre-card h3 {
+    font-size: 1.4rem;
+  }
+  .billetterie .allCard .card .body-card {
+    padding: 10% 5% 20% 0;
+    width: 200%;
+    font-size: 1.2rem;
+    gap: 4vh;
+  }
+  .billetterie .allCard .card .pays {
+    font-size: 1.4rem;
+  }
+  .billetterie .allCard .card .oposition {
+    gap: 15%;
+  }
+  .billetterie .allCard .card .oposition img {
+    width: 65px;
+  }
+  .billetterie .allCard .card .bouton-reservation p {
+    font-size: 1rem;
   }
 }
 @media only screen and (min-width: 1440px) {
@@ -716,6 +800,7 @@
   }
   .derouleEpreuves h2 {
     font-size: 2.5rem;
+    text-align: left;
   }
   .derouleEpreuves p {
     font-size: 1.5rem;
@@ -723,5 +808,50 @@
   }
   .transitionImage .imgTransition img {
     height: 550px;
+  }
+  .billetterie {
+    padding-top: 5%;
+  }
+  .billetterie > div:nth-child(1) {
+    justify-content: flex-start;
+  }
+  .billetterie > div:nth-child(1) h2 {
+    margin: 0 0 10% 0;
+    font-size: 2.5rem;
+    text-align: left;
+  }
+  .billetterie .allCard {
+    gap: 0px;
+    padding-bottom: 5%;
+    overflow: hidden;
+    gap: 50px;
+  }
+  .billetterie .allCard .card {
+    margin: 0 0%;
+    flex: 1 1 25%;
+  }
+  .billetterie .allCard .card .titre-card {
+    width: 100%;
+  }
+  .billetterie .allCard .card .titre-card h3 {
+    font-size: 1.4rem;
+  }
+  .billetterie .allCard .card .body-card {
+    padding: 10% 5% 20% 0;
+    width: 100%;
+    font-size: 1.2rem;
+    gap: 4vh;
+  }
+  .billetterie .allCard .card .pays {
+    font-size: 1.4rem;
+  }
+  .billetterie .allCard .card .oposition {
+    gap: 15%;
+  }
+  .billetterie .allCard .card .oposition img {
+    width: 65px;
+  }
+  .billetterie .allCard .card .bouton-reservation p {
+    font-size: 1rem;
   }
 }
