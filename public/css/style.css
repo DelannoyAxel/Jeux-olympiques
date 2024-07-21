@@ -816,7 +816,7 @@
     justify-content: flex-start;
   }
   .billetterie > div:nth-child(1) h2 {
-    margin: 0 0 10% 0;
+    margin: 0 0 7.5% 0;
     font-size: 2.5rem;
     text-align: left;
   }
@@ -837,10 +837,10 @@
     font-size: 1.4rem;
   }
   .billetterie .allCard .card .body-card {
-    padding: 10% 5% 20% 0;
+    padding: 10% 5% 10% 0;
     width: 100%;
-    font-size: 1.2rem;
-    gap: 4vh;
+    font-size: 1.5rem;
+    gap: 5vh;
   }
   .billetterie .allCard .card .pays {
     font-size: 1.4rem;
