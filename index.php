@@ -166,26 +166,21 @@ ob_start();
         <div class="card">
 
             <div class="titre-card">
-                <h3>Homme</h3>
+                <h3>épreuve individuelle Homme</h3>
             </div>
 
             <div class="body-card">
                 <div class="date">
-                    <p>jeudi 11 juillet 2024 à 21h15</p>
+                    <p>jeudi 11 Aout 2024 à 11:00</p>
                 </div>
 
                 <div class="lieu">
                     <p>Saint-Denis Stade de France</p>
                 </div>
 
-                <div class="pays">
-                    FRANCE <br> JAPON
-                </div>
-
                 <div class="oposition">
-                    <div class="pays1"><img src="public/images/franceDrap.svg" alt="drapeau français"></div>
-                    <h3>VS</h3>
-                    <div class="pays2"><img src="public/images/japonDrap.svg" alt="drapeau japon"></div>
+                    <h4>ESCRIME</h4>
+                    <img src="public/images/escrimbody 2.jpg" alt="photo de l'épreuve d'escrime">
                 </div>
 
                 <div class="bouton-reservation">
@@ -197,26 +192,22 @@ ob_start();
         <div class="card">
 
             <div class="titre-card">
-                <h3>Femme</h3>
+                <h3>épreuve individuelle femme</h3>
             </div>
 
             <div class="body-card">
                 <div class="date">
-                    <p>jeudi 11 juillet 2024 à 21h15</p>
+                    <p>jeudi 10 Aout 2024 à 14:30</p>
                 </div>
 
                 <div class="lieu">
                     <p>Saint-Denis Stade de France</p>
                 </div>
 
-                <div class="pays">
-                    FRANCE <br> JAPON
-                </div>
 
                 <div class="oposition">
-                    <div class="pays1"><img src="public/images/franceDrap.svg" alt="drapeau français"></div>
-                    <h3>VS</h3>
-                    <div class="pays2"><img src="public/images/japonDrap.svg" alt="drapeau japon"></div>
+                    <h4>natation</h4>
+                    <img src="public/images/natation small 3.jpg" alt="photo de l'épreuve de natation">
                 </div>
 
                 <div class="bouton-reservation">
@@ -228,38 +219,44 @@ ob_start();
         <div class="card">
 
             <div class="titre-card">
-                <h3>Homme</h3>
+                <h3>épreuve individuelle Homme</h3>
             </div>
 
             <div class="body-card">
                 <div class="date">
-                    <p>jeudi 11 juillet 2024 à 21h15</p>
+                    <p>jeudi 08 Aout 2024 à 14:00</p>
                 </div>
 
                 <div class="lieu">
                     <p>Saint-Denis Stade de France</p>
                 </div>
 
-                <div class="pays">
-                    FRANCE <br> JAPON
-                </div>
-
                 <div class="oposition">
-                    <div class="pays1"><img src="public/images/franceDrap.svg" alt="drapeau français"></div>
-                    <h3>VS</h3>
-                    <div class="pays2"><img src="public/images/japonDrap.svg" alt="drapeau japon"></div>
+                    <h4>equitation</h4>
+                    <img src="public/images/equitation-small 3.jpg" alt="photo de l'épreuve d'equitation">
                 </div>
 
                 <div class="bouton-reservation">
                     <p>JE RÉSERVE</p>
                 </div>
             </div>
+
+
         </div>
     </div>
+    </div>
+</section>
+
+<section class="redirectionClassement">
+
+    <div>
+        <a href="votre-lien.html">voir le Classement</a>
+    </div>
+
 </section>
 
 
 <?php
 $content = ob_get_clean();
 $title = "Accueil";
-require "template.php";
+require "./views/template.php";
