@@ -37,11 +37,17 @@ if (session_status() == PHP_SESSION_NONE) {
 
             <div class="GroupeRight">
                 <a href="#">BILLETERIE</a>
-                <?php if (isset($_SESSION['id'])): ?>
-                    <a href="<?= URL ?>logout">MON COMPTE</a>
+                <?php if (isset($_SESSION['id'])) : ?>
+                    <a href="" class="btnMonCompte">MON COMPTE ↓</a>
+                    <div class="menuHiddenCompte">
+                        <ul>
+                            <li><a href="">Votre compte</a></li>
+                            <li><a href="<?= URL ?>logout">Déconnexion</a></li>
+                        </ul>
+                    </div>
                 <?php else : ?>
                     <a href="<?= URL ?>login">CONNEXION</a>
-                <?php endif; ?> 
+                <?php endif; ?>
             </div>
         </nav>
 
@@ -56,13 +62,24 @@ if (session_status() == PHP_SESSION_NONE) {
             <div class="menu" id="menu">
                 <a href="index.php">ACCUEIL</a>
                 <a href="classement.php">CLASSEMENT</a>
-                <a href="#">INFORMATIONS</a>
+                <a href="#">BILLETERIE</a>
             </div>
 
             <img class="logoJo" src="./public/images/LOGO JO 1.svg" alt="Logo des jeux olympiques">
 
             <div class="profil" id="profil">
-                <i class="fa-solid fa-user" style="color: #ffffff;"></i>
+                <?php if (isset($_SESSION['id'])) : ?>
+                    <a href="" class="btnMonCompte"><i class="fa-solid fa-user" style="color: #335454;"></i></a>
+                    <div class="menuHiddenCompte">
+                        <ul>
+                            <li><a href="">Votre compte</a></li>
+                            <li><a href="<?= URL ?>logout">Déconnexion</a></li>
+                        </ul>
+                    </div>
+                <?php else : ?>
+                    <a href="<?= URL ?>login"><i class="fa-solid fa-user" style="color: #ffffff;"></i></a>
+                <?php endif; ?>
+
             </div>
         </nav>
     </header>

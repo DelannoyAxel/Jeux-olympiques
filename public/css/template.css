@@ -107,6 +107,44 @@ header .navTel .profil {
   font-size: 1rem;
   cursor: pointer;
   padding-top: 1%;
+  position: relative;
+}
+header .navTel .profil .menuHiddenCompte {
+  background-color: white;
+  width: 150px;
+  height: auto;
+  z-index: 100;
+  position: absolute;
+  right: 0;
+  top: 5vh;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+header .navTel .profil .menuHiddenCompte ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  padding: 5%;
+}
+header .navTel .profil .menuHiddenCompte ul a {
+  text-decoration: none;
+  color: #232323;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  display: block;
+  width: 100%;
+}
+header .navTel .profil .menuHiddenCompte ul a:hover {
+  background-color: #f0f0f0;
+}
+header .navTel .profil .menuHiddenCompte.show {
+  display: flex;
 }
 .partenaires {
   display: flex;
@@ -411,7 +449,7 @@ footer .royalties a {
     gap: 10%;
     padding-top: 1.5%;
   }
-  header .navPc a {
+  header .navPc a:not(.menuHiddenCompte a) {
     text-decoration: none;
     color: var(--darkGrey);
     font-weight: bold;
@@ -424,6 +462,46 @@ footer .royalties a {
     padding: 1rem;
     width: 17vw;
     height: 4vh;
+  }
+  header .navPc .GroupeRight {
+    position: relative;
+  }
+  header .navPc .GroupeRight .menuHiddenCompte {
+    background-color: white;
+    width: 15vw;
+    height: auto;
+    z-index: 100;
+    position: absolute;
+    right: 0;
+    top: 7.5vh;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  header .navPc .GroupeRight .menuHiddenCompte ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+  }
+  header .navPc .GroupeRight .menuHiddenCompte ul a {
+    text-decoration: none;
+    color: #232323;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    display: block;
+    width: 100%;
+  }
+  header .navPc .GroupeRight .menuHiddenCompte ul a:hover {
+    background-color: #f0f0f0;
+  }
+  header .navPc .GroupeRight .menuHiddenCompte.show {
+    display: flex;
   }
   .partenaires {
     margin: 0 10%;
@@ -463,8 +541,28 @@ footer .royalties a {
   header .navTel {
     display: none;
   }
-  header .navPc a {
+  header .navPc a:not(.menuHiddenCompte a) {
     font-size: 1.2rem;
+  }
+  header .navPc .GroupeRight {
+    position: relative;
+  }
+  header .navPc .GroupeRight .menuHiddenCompte {
+    background-color: white;
+    width: 15vw;
+    height: auto;
+    z-index: 100;
+    position: absolute;
+    right: 0;
+    top: 8.5vh;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  header .navPc .GroupeRight .menuHiddenCompte ul a {
+    font-size: 1.1rem;
   }
   .partenaires {
     margin: 0 10%;
