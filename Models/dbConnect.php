@@ -12,7 +12,7 @@ abstract class DbConnect
         // Défini les paramètres de connexion à la base de données
         $host = getenv("DB_HOST") ?: '127.0.0.1';
         $port = getenv("DB_PORT") ?: '3306';
-        $db = getenv("DB_NAME") ?: 'Jeux_olympiques';
+        $db = getenv("DB_NAME") ?: 'jeux_olympiquesv2';
         $user = getenv("DB_USER") ?: 'root';
         $pwd = getenv("DB_PASS") ?: '';
         $charset = 'utf8mb4';
@@ -62,8 +62,6 @@ abstract class DbConnect
         return self::$instance->pdo;
     }
 }
-
-
 
 
 

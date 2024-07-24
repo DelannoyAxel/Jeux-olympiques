@@ -1,0 +1,9 @@
+
+# Ce fichier .htaccess configure Apache pour réécrire les URL entrantes, redirigeant les requêtes vers index.php tout en conservant le chemin demandé comme paramètre. 
+
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^(.*)$ index.php?page=$1 [L]
