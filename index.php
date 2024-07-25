@@ -5,6 +5,7 @@ define("URL", str_replace("index.php", "", (isset($_SERVER["HTTPS"]) ? "https" :
 
 require_once './Controllers/LoginController.class.php';
 require_once './Controllers/LogoutController.class.php';
+require_once './controllers/ProfilController.class.php';
 
 try {
 
@@ -32,6 +33,11 @@ try {
                     $controller = new LogoutController();
                     $controller->logout();
                     break;
+
+                    case 'profil':
+                        $controller = new ProfilController();
+                        $controller->mettreAJourProfil();
+                        break;
 
             default:
                 throw new Exception("La page n'existe pas");

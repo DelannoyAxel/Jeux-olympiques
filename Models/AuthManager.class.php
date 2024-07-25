@@ -3,43 +3,49 @@
 require_once "MyDbConnect.php";
 
 
-class AuthManager {
+class AuthManager
+{
     private $pdo;
 
-    public function __construct() {
+    public function __construct()
+    {
         $this->pdo = MyDbConnect::getInstance();
     }
 
-    public function startSession() {
+    public function startSession()
+    {
         if (session_status() == PHP_SESSION_NONE) {
             session_start();
         }
     }
 
-    public function authenticate($email, $password) {
-        $stmt = $this->pdo->prepare('SELECT id, motDePasse, prenom FROM utilisateur WHERE email = ?');
+    public function authenticate($email, $password)
+    {
+        $stmt = $this->pdo->prepare('SELECT id, motDePasse FROM utilisateur WHERE email = ?');
         $stmt->execute([$email]);
         $user = $stmt->fetch();
 
-        if ($user && password_verify($password, $user['motDePasse'])) {           
+        if ($user && password_verify($password, $user['motDePasse'])) {
             return $user['id'];
         } else {
             return false;
         }
     }
 
-    public function estAdmin($Id) {
+    public function estAdmin($Id)
+    {
         $stmt = $this->pdo->prepare('SELECT isAdmin FROM utilisateur WHERE id = ?');
         $stmt->execute([$Id]);
         $result = $stmt->fetch(PDO::FETCH_ASSOC);
-        if($result){
+        if ($result) {
             return (bool)$result["isAdmin"];
-        }else{
+        } else {
             return false;
         }
     }
 
-    public function verifierAdmin() {
+    public function verifierAdmin()
+    {
         $this->startSession();
         if (!isset($_SESSION['id'])) {
             echo "Session utilisateur non définie.";
@@ -53,9 +59,44 @@ class AuthManager {
         }
     }
 
-    public function logout() {
+    public function logout()
+    {
         $this->startSession();
         session_unset();
         session_destroy();
     }
+
+    public function informationsUser()
+    {
+        $this->startSession();
+        if (!isset($_SESSION["id"])) {
+            echo "Session utilisateur non définie.";
+            exit();
+        } else {
+            $userId = $_SESSION["id"];
+            $stmt = $this->pdo->prepare('SELECT * FROM utilisateur WHERE id = ?');
+            $stmt->execute([$userId]);
+            return $stmt->fetch(PDO::FETCH_ASSOC);
+        }
+    }
+    
+
+    public function mettreAJourUtilisateur($id, $nom, $prenom, $email, $password = null)
+    {
+        // Créez la requête SQL en fonction de la présence ou non du mot de passe
+        $sql = "UPDATE utilisateur SET nom = ?, prenom = ?, email = ?" . ($password ? ", motDePasse = ?" : "") . " WHERE id = ?";
+        
+        $params = [$nom, $prenom, $email];
+        
+        if ($password) {
+            $password = password_hash($password, PASSWORD_BCRYPT);
+            $params[] = $password; // Ajouter le mot de passe haché aux paramètres
+        }
+        
+        $params[] = $id; // ID utilisateur
+        
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->execute($params);
+    }
+    
 }

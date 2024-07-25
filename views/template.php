@@ -41,8 +41,8 @@ if (session_status() == PHP_SESSION_NONE) {
                     <a href="" class="btnMonCompte">MON COMPTE ↓</a>
                     <div class="menuHiddenCompte">
                         <ul>
-                            <li><a href="">Votre compte</a></li>
-                            <li><a href="<?= URL ?>logout">Déconnexion</a></li>
+                        <li><a href="<?= URL ?>profil">Votre compte</a></li>
+                        <li><a href="<?= URL ?>logout">Déconnexion</a></li>
                         </ul>
                     </div>
                 <?php else : ?>
@@ -72,7 +72,7 @@ if (session_status() == PHP_SESSION_NONE) {
                     <a href="" class="btnMonCompte"><i class="fa-solid fa-user" style="color: #335454;"></i></a>
                     <div class="menuHiddenCompte">
                         <ul>
-                            <li><a href="">Votre compte</a></li>
+                            <li><a href="<?= URL ?>profil">Votre compte</a></li>
                             <li><a href="<?= URL ?>logout">Déconnexion</a></li>
                         </ul>
                     </div>

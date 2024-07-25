@@ -43,30 +43,32 @@ document.querySelectorAll('.actuRow').forEach(function(actu) {
 
 // menu mon compte PC
 document.addEventListener('DOMContentLoaded', (event) => {
-    const btnMonCompte = document.querySelector(".btnMonCompte");
-    const menuHiddenCompte = document.querySelector(".menuHiddenCompte");
+    const btnMonCompte = document.querySelectorAll(".btnMonCompte");
+    const menuHiddenCompte = document.querySelectorAll(".menuHiddenCompte");
 
     let timeout;
 
-    btnMonCompte.addEventListener('mouseenter', function() {
-        clearTimeout(timeout);
-        menuHiddenCompte.classList.add("show");
-    });
+    btnMonCompte.forEach((btn, index) => {
+        btn.addEventListener('mouseenter', function() {
+            clearTimeout(timeout);
+            menuHiddenCompte[index].classList.add("show");
+        });
 
-    btnMonCompte.addEventListener('mouseleave', function() {
-        timeout = setTimeout(function() {
-            menuHiddenCompte.classList.remove("show");
-        }, 300); 
-    });
+        btn.addEventListener('mouseleave', function() {
+            timeout = setTimeout(function() {
+                menuHiddenCompte[index].classList.remove("show");
+            }, 300);
+        });
 
-    menuHiddenCompte.addEventListener('mouseenter', function() {
-        clearTimeout(timeout);
-        menuHiddenCompte.classList.add("show");
-    });
+        menuHiddenCompte[index].addEventListener('mouseenter', function() {
+            clearTimeout(timeout);
+            menuHiddenCompte[index].classList.add("show");
+        });
 
-    menuHiddenCompte.addEventListener('mouseleave', function() {
-        timeout = setTimeout(function() {
-            menuHiddenCompte.classList.remove("show");
-        }, 300); 
+        menuHiddenCompte[index].addEventListener('mouseleave', function() {
+            timeout = setTimeout(function() {
+                menuHiddenCompte[index].classList.remove("show");
+            }, 300);
+        });
     });
 });

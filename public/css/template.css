@@ -117,7 +117,7 @@ header .navTel .profil .menuHiddenCompte {
   position: absolute;
   right: 0;
   top: 5vh;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   border-radius: 5px;
@@ -282,6 +282,9 @@ footer .royalties a {
     cursor: pointer;
     padding-top: 1.5%;
   }
+  header .navTel .profil .menuHiddenCompte {
+    width: 175px;
+  }
   .partenaires .logoPartenaire div img {
     width: 120px;
   }
@@ -365,6 +368,11 @@ footer .royalties a {
     font-size: 1.7rem;
     cursor: pointer;
     padding-top: 0;
+  }
+  header .navTel .profil .menuHiddenCompte {
+    width: 235px;
+    font-size: 1.2rem;
+    right: 2vw;
   }
   .partenaires {
     padding-bottom: 5vh;
