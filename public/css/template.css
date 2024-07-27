@@ -9,7 +9,6 @@
   --white: #f5f5f5;
   --gold: #D6C278;
   font-family: "Inter", sans-serif;
-  font-family: "M PLUS 1p", sans-serif;
   font-family: "Fira Sans", sans-serif;
 }
 header {
@@ -448,7 +447,7 @@ footer .royalties a {
     justify-content: space-around;
   }
   header .navPc .logoJo {
-    width: 12%;
+    width: 10%;
     padding-top: 1.2%;
   }
   header .navPc .GroupeLeft,
@@ -551,6 +550,9 @@ footer .royalties a {
   }
   header .navPc a:not(.menuHiddenCompte a) {
     font-size: 1.2rem;
+  }
+  header .navPc .logoJo {
+    width: 9%;
   }
   header .navPc .GroupeRight {
     position: relative;

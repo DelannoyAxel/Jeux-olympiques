@@ -16,8 +16,9 @@ if (!isset($_SESSION['id'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../public/css/template.css">
-    <link rel="stylesheet" href="../public/css/style.css">
+    <!-- <link rel="stylesheet" href="../public/css/template.css">
+    <link rel="stylesheet" href="../public/css/style.css"> -->
+    <link rel="stylesheet" href="../public/css/profil.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
@@ -74,7 +75,7 @@ if (!isset($_SESSION['id'])) {
 
             <div class="profil" id="profil">
                 <?php if (isset($_SESSION['id'])) : ?>
-                    <a href="" class="btnMonCompte"><i class="fa-solid fa-user" style="color: #335454;"></i></a>
+                    <a href="" class="btnMonCompte"><i class="fa-solid fa-user" style="color: #D6C278;"></i></a>
                     <div class="menuHiddenCompte">
                         <ul>
                             <li><a href="">Votre compte</a></li>
@@ -89,11 +90,35 @@ if (!isset($_SESSION['id'])) {
         </nav>
     </header>
 
+    <section class="profilSection">
+        <h2>Mon profil</h2>
+        <div id="profilDetails">
+            <div>
+                <label for="nom">Nom :</label>
+                <p id="nom"><?= htmlspecialchars($user["nom"] ?? '', ENT_QUOTES, 'UTF-8'); ?></p>
+            </div>
+            <div>
+                <label for="prenom">Prénom :</label>
+                <p id="prenom"><?= htmlspecialchars($user["prenom"] ?? '', ENT_QUOTES, 'UTF-8'); ?></p>
+            </div>
+            <div>
+                <label for="email">Email :</label>
+                <p id="email"><?= htmlspecialchars($user["email"] ?? '', ENT_QUOTES, 'UTF-8'); ?></p>
+            </div>
+            <div>
+                <button id="editButton">Modifier mes informations personnelles</button>
+            </div>
+            <?php if (isset($_SESSION['success_message'])) : ?>
+                <div id="success-message"><?= $_SESSION['success_message']; ?></div>
+                <?php unset($_SESSION['success_message']); ?>
+            <?php endif; ?>
+        </div>
+    </section>
 
-    <section class="profil">
+    <section class="profilSectionUpdate">
         <h2>Mon profil</h2>
 
-        <form action="<?= URL ?>profil" method="POST">
+        <form id="profilForm" action="<?= URL ?>profil" method="POST">
             <div>
                 <label for="nom">Nom :</label>
                 <input type="text" id="nom" name="nom" value="<?= htmlspecialchars($user["nom"] ?? '', ENT_QUOTES, 'UTF-8'); ?>" required>
@@ -111,9 +136,20 @@ if (!isset($_SESSION['id'])) {
                 <input type="password" id="password" name="password" placeholder="Laissez vide si inchangé">
             </div>
             <div>
-                <button type="submit">Mettre à jour</button>
+                <button id="majProfil" type="submit">Mettre à jour</button>
             </div>
         </form>
+        <?php if (isset($_SESSION['success_message'])) : ?>
+            <div id="success-message"><?= $_SESSION['success_message']; ?></div>
+            <?php unset($_SESSION['success_message']); ?>
+        <?php endif; ?>
     </section>
+
+    <section>
+        <a href="<?= URL ?>logout">Déconnexion</a>
+    </section>
+
+    <script src="public/js/style.js"></script>
+</body>
 
 </html>

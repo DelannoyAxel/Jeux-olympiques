@@ -40,15 +40,13 @@ class ProfilController
             $email = $_POST["email"];
             $password = $_POST["password"];
 
-            // Mettre à jour le profil utilisateur
             $this->authManager->mettreAJourUtilisateur($_SESSION["id"], $nom, $prenom, $email, $password);
 
-            // Rediriger vers la page de profil après la mise à jour
+            $_SESSION['success_message'] = 'Votre profil a été mis à jour avec succès.';
             header("Location: " . URL . "profil");
             exit();
         }
 
-        // Afficher le profil après mise à jour (si besoin)
         $this->afficherProfil();
     }
 }

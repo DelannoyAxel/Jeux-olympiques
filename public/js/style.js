@@ -1,4 +1,4 @@
-document.getElementById('burger').addEventListener('click', function() {
+document.getElementById('burger').addEventListener('click', function () {
     const menu = document.getElementById('menu');
 
     menu.classList.toggle('open');
@@ -7,29 +7,29 @@ document.getElementById('burger').addEventListener('click', function() {
 
         // Si le menu est ouvert il declanche l'animation 
         const menuItems = menu.querySelectorAll('a');
-        
+
         menuItems.forEach((item, index) => {
             setTimeout(() => {
                 item.style.opacity = '1';
                 item.style.transform = 'translateY(0)';
                 // Rajoute du delai pour l'apparition de chaque item a du menu ouvert
-            }, index * 100); 
+            }, index * 100);
         });
     } else {
-        
+
         // Si le menu est fermé , reset le style comme defini en css
         const menuItems = menu.querySelectorAll('a');
         menuItems.forEach((item) => {
             item.style.opacity = '0';
-            item.style.transform = 'translateY(-50px)'; 
+            item.style.transform = 'translateY(-50px)';
         });
     }
 });
 // ---------------------------
 // redirection des pages 
 
-document.querySelectorAll('.actuRow').forEach(function(actu) {
-    actu.addEventListener('click', function() {
+document.querySelectorAll('.actuRow').forEach(function (actu) {
+    actu.addEventListener('click', function () {
         const url = this.getAttribute('data-url');
         if (url) {
             window.location.href = url;
@@ -49,26 +49,46 @@ document.addEventListener('DOMContentLoaded', (event) => {
     let timeout;
 
     btnMonCompte.forEach((btn, index) => {
-        btn.addEventListener('mouseenter', function() {
+        btn.addEventListener('mouseenter', function () {
             clearTimeout(timeout);
             menuHiddenCompte[index].classList.add("show");
         });
 
-        btn.addEventListener('mouseleave', function() {
-            timeout = setTimeout(function() {
+        btn.addEventListener('mouseleave', function () {
+            timeout = setTimeout(function () {
                 menuHiddenCompte[index].classList.remove("show");
             }, 300);
         });
 
-        menuHiddenCompte[index].addEventListener('mouseenter', function() {
+        menuHiddenCompte[index].addEventListener('mouseenter', function () {
             clearTimeout(timeout);
             menuHiddenCompte[index].classList.add("show");
         });
 
-        menuHiddenCompte[index].addEventListener('mouseleave', function() {
-            timeout = setTimeout(function() {
+        menuHiddenCompte[index].addEventListener('mouseleave', function () {
+            timeout = setTimeout(function () {
                 menuHiddenCompte[index].classList.remove("show");
             }, 300);
         });
     });
+});
+
+
+
+// -------------
+// PAGE PROFIL
+// -------------
+
+const profilSection = document.querySelector(".profilSection")
+const profilSectionUpdate = document.querySelector(".profilSectionUpdate")
+
+document.getElementById("editButton").addEventListener("click", function(){
+    profilSection.style.display = "none";
+    profilSectionUpdate.style.display = "flex";
+});
+
+
+document.getElementById("majProfil").addEventListener("click", function(){
+profilSectionUpdate.style.display = "none"
+profilSection.style.display = "flex"
 });
