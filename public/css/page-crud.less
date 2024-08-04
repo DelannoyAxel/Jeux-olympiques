@@ -1,0 +1,187 @@
+@darkGrey: #232323;
+@grey: #D9D9D9;
+@white: #f5f5f5;
+@gold: #D6C278;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Fira Sans", sans-serif;
+  background-color: @white;
+}
+
+.gestionCrud {
+  flex: 1;
+  padding: 20px;
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+
+    h1 {
+      margin: 0;
+      color: @darkGrey;
+      text-transform: uppercase;
+    }
+
+    .btn {
+      background: @gold;
+      color: @darkGrey;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      text-decoration: none;
+      font-size: 1em;
+      cursor: pointer;
+      transition: background 0.3s ease;
+
+      &:hover {
+        background: darken(@gold, 10%);
+      }
+    }
+
+    .btn-edit {
+      background: lighten(@darkGrey, 10%);
+
+      &:hover {
+        background: lighten(@darkGrey, 20%);
+      }
+    }
+
+    .btn-delete {
+      background: red;
+
+      &:hover {
+        background: darken(red, 10%);
+      }
+    }
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background: @white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    thead {
+      background: @darkGrey;
+      color: @white;
+
+      th {
+        padding: 12px;
+        text-align: left;
+        border-bottom: 2px solid @grey;
+      }
+    }
+
+    tbody {
+      tr {
+        border-bottom: 1px solid @grey;
+
+        &:hover {
+          background: lighten(@grey, 10%);
+        }
+
+        td {
+          padding: 12px;
+        }
+
+        .actions {
+          display: flex;
+          gap: 15px;
+
+          a {
+
+            i {
+              color: @darkGrey;
+
+              &:hover{
+                cursor: pointer;
+                color: grey;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+/* Style du conteneur du formulaire pour crée un utilisateur */
+.formulaireUtilisateur {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: @white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+
+  h1 {
+      color: @darkGrey;
+      text-align: center;
+      margin-bottom: 40px;
+      font-style: italic;
+      font-size: 1.5rem;
+  }
+
+  form {
+      display: flex;
+      flex-direction: column;
+
+      label {
+          margin-bottom: 8px;
+          color: @darkGrey;
+          font-weight: bold;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      input[type="password"] {
+          padding: 10px;
+          border: 1px solid @grey;
+          border-radius: 4px;
+          margin-bottom: 20px;
+          font-size: 16px;
+          color: @darkGrey;
+      }
+
+      .admin-options {
+          margin-bottom: 20px;
+
+          label {
+              display: block;
+              margin-bottom: 8px;
+              color: @darkGrey;
+              font-weight: normal;
+
+              input[type="radio"] {
+                  margin-right: 8px;
+              }
+          }
+      }
+
+      button {
+          padding: 10px 20px;
+          border: none;
+          border-radius: 4px;
+          background-color: @gold;
+          color: @darkGrey;
+          font-size: 16px;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+
+          &:hover {
+              background-color: darken(@gold, 10%);
+          }
+      }
+  }
+}

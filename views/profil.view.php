@@ -147,6 +147,9 @@ if (!isset($_SESSION['id'])) {
 
     <section>
         <a href="<?= URL ?>logout">Déconnexion</a>
+        <?php if (isset($isAdmin) && $isAdmin): ?>
+            <a href="<?= URL ?>crud">CRUD</a>
+        <?php endif; ?>
     </section>
 
     <script src="public/js/style.js"></script>

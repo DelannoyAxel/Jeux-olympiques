@@ -83,7 +83,6 @@ class AuthManager
 
     public function mettreAJourUtilisateur($id, $nom, $prenom, $email, $password = null)
     {
-        // Créez la requête SQL en fonction de la présence ou non du mot de passe
         $sql = "UPDATE utilisateur SET nom = ?, prenom = ?, email = ?" . ($password ? ", motDePasse = ?" : "") . " WHERE id = ?";
         
         $params = [$nom, $prenom, $email];

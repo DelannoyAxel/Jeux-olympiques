@@ -21,6 +21,8 @@ class ProfilController
         }
 
         $user = $this->authManager->informationsUser();
+        $isAdmin = $this->authManager->estAdmin($_SESSION['id']);
+
 
         require "./views/profil.view.php";
     }
@@ -49,4 +51,5 @@ class ProfilController
 
         $this->afficherProfil();
     }
+
 }
