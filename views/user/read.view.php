@@ -5,7 +5,7 @@ ob_start();
 <div class="gestionCrud">
     <header>
         <h1>Gestion des utilisateurs</h1>
-        <a class="btn" href="create">Ajouter un utilisateur</a>
+        <a class="btn" href="createUser">Ajouter un utilisateur</a>
     </header>
     <table>
         <thead>
@@ -27,8 +27,8 @@ ob_start();
                     <td><?= htmlspecialchars($user['isAdmin']) ?></td>
                     <td><?= htmlspecialchars($user['email']) ?></td>
                     <td class="actions">
-                        <a class="btn btn-edit" href="<?php echo URL . 'update_user/' . $user['id']; ?>"><i class="fa-regular fa-pen-to-square"></i></a>
-                        <a class="btn btn-delete" href="<?php echo URL . 'delete_user/' . $user['id']; ?>" onclick="return confirm('Voulez-vous vraiment supprimer cet utilisateur ?');"><i class="fa-solid fa-trash"></i></a>
+                        <a class="btn btn-edit" href="<?php echo URL . 'updateUser/' . $user['id']; ?>"><i class="fa-regular fa-pen-to-square"></i></a>
+                        <a class="btn btn-delete" href="<?php echo URL . 'deleteUser/' . $user['id']; ?>" onclick="return confirm('Voulez-vous vraiment supprimer cet utilisateur ?');"><i class="fa-solid fa-trash"></i></a>
                     </td>
                 </tr>
             <?php endforeach; ?>

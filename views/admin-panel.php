@@ -20,11 +20,11 @@
                 <a href=<?= URL. 'accueil'?>><img class="logoJo" src="../public/images/LOGO JO 1.svg" alt="Logo des jeux olympiques"></a>
                 <h2>Panneau Admin</h2>
                 <ul>
-                    <li><a href=<?= URL. 'accueil'?>>Accueil</a></li>
+                    <li><a href=<?= URL . 'accueil'?>>Accueil</a></li>
                     <li><a href=<?= URL . 'user'?>>Utilisateurs</a></li>
-                    <li><a href="#">Classements</a></li>
-                    <li><a href="#">Équipes</a></li>
-                    <li><a href="#">Participants</a></li>
+                    <li><a href=<?= URL . 'classementCrud'?>>Classements</a></li>
+                    <li><a href=<?= URL . 'equipeCrud'?>>Équipes</a></li>
+                    <li><a href=<?= URL . 'participantCrud'?>>Participants</a></li>
                     <li><a href="profil">Mon compte</a></li>
                     <li><a href="logout">Deconnexion</a></li>
                 </ul>

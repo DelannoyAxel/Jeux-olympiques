@@ -5,7 +5,7 @@ ob_start();
 <section class="formulaireUtilisateur">
     <h1>Ajouter un nouvel utilisateur</h1>
 
-    <form action="<?= URL ?>create" method="post">
+    <form action="<?= URL ?>createUser" method="post">
         <label for="nom">Nom :</label>
         <input type="text" id="nom" name="nom" required>
 

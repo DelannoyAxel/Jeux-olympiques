@@ -6,6 +6,12 @@ require_once './Controllers/LoginController.class.php';
 require_once './Controllers/LogoutController.class.php';
 require_once './controllers/ProfilController.class.php';
 require_once "./Controllers/UserController.class.php";
+require_once './Controllers/ClassementController.class.php';
+require_once './Controllers/EquipeController.class.php';
+require_once './Controllers/ParticipantController.class.php';
+
+
+
 
 try {
     if (empty($_GET["page"])) {
@@ -42,17 +48,17 @@ try {
                 require "./views/dashboard.view.php";
                 break;
 
-            case 'create':
-                $controller = new UserController();
-                $controller->create();
-                break;
-
             case 'user':
                 $controller = new UserController();
                 $controller->index();
                 break;
 
-            case 'update_user':
+            case 'createUser':
+                $controller = new UserController();
+                $controller->create();
+                break;
+
+            case 'updateUser':
                 $controller = new UserController();
                 if (isset($url[1])) {
                     $controller->update($url[1]);
@@ -61,11 +67,90 @@ try {
                 }
                 break;
 
-            case 'delete_user':
+            case 'deleteUser':
                 $controller = new UserController();
                 if (isset($url[1])) {
                     $controller->delete($url[1]);
                 }
+                break;
+
+            case 'classementCrud':
+                $controller = new ClassementController();
+                $controller->index();
+                break;
+
+            case 'createClassement':
+                $controller = new ClassementController();
+                $controller->create();
+                break;
+
+            case 'deleteClassement':
+                $controller = new ClassementController();
+                if (isset($url[1])) {
+                    $controller->delete($url[1]);
+                }
+                break;
+
+            case 'updateClassement':
+                $controller = new ClassementController();
+                if (isset($url[1])) {
+                    $controller->update($url[1]);
+                } else {
+                    throw new Exception("ID classement non spécifié pour la mise à jour.");
+                }
+                break;
+
+            case 'equipeCrud':
+                $controller = new EquipeController();
+                $controller->index();
+                break;
+
+            case 'createEquipe':
+                $controller = new EquipeController();
+                $controller->create();
+                break;
+
+            case 'updateEquipe':
+                $controller = new EquipeController();
+                if (isset($url[1])) {
+                    $controller->update($url[1]);
+                } else {
+                    throw new Exception("ID équipe non spécifié pour la mise à jour.");
+                }
+                break;
+
+            case 'deleteEquipe':
+                $controller = new EquipeController();
+                if (isset($url[1])) {
+                    $controller->delete($url[1]);
+                }
+                break;
+
+            case 'participantCrud':
+                $controller = new ParticipantController();
+                $controller->index();
+                break;
+
+            case 'createParticipant':
+                $controller = new ParticipantController();
+                $controller->create();
+                break;
+
+            case 'updateParticipant':
+                $controller = new ParticipantController();
+                if (isset($url[1])) {
+                    $controller->update($url[1]);
+                } else {
+                    throw new Exception("ID participant non spécifié pour la mise à jour.");
+                }
+                break;
+
+            case 'deleteParticipant':
+                $controller = new ParticipantController();
+                if (isset($url[1])) {
+                    $controller->delete($url[1]);
+                }
+                break;
 
             default:
                 throw new Exception("La page n'existe pas");

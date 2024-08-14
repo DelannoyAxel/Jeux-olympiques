@@ -5,7 +5,7 @@ ob_start();
 <section class="formulaireUtilisateur">
     <h1>Mettre à jour l'utilisateur</h1>
 
-    <form action="<?= URL . 'update_user/' . htmlspecialchars($user['id']); ?>" method="post">
+    <form action="<?= URL . 'updateUser/' . htmlspecialchars($user['id']); ?>" method="post">
         <label for="nom">Nom :</label>
         <input type="text" id="nom" name="nom" value="<?php echo htmlspecialchars($user['nom'] ?? ''); ?>" required>
 

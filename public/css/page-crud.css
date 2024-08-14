@@ -112,6 +112,7 @@ body {
 }
 .formulaireUtilisateur form input[type="text"],
 .formulaireUtilisateur form input[type="email"],
+.formulaireUtilisateur form input[type="number"],
 .formulaireUtilisateur form input[type="password"] {
   padding: 10px;
   border: 1px solid #D9D9D9;

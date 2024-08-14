@@ -53,7 +53,7 @@ class UserController
             $prenom = $_POST['prenom'];
             $email = $_POST['email'];
             $motDePasse = $_POST['motDePasse'];
-            $isAdmin = isset($_POST['isAdmin']) ? 1 : 0;
+            $isAdmin = isset($_POST['isAdmin']) ? (int) $_POST['isAdmin'] : 0;
 
             if (empty($nom) || empty($prenom) || empty($email)) {
                 die('Tous les champs sont requis.');
