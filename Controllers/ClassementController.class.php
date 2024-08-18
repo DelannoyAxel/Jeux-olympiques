@@ -1,6 +1,7 @@
 <?php
 
 require "Models/classementManager.php";
+require_once './Models/ParticipantManager.php';
 
 
 class ClassementController
@@ -65,4 +66,46 @@ class ClassementController
 
         include 'views/classement/update.view.php';
     }
+
+    
+    public function resultatClassement()
+    {
+        $participantManager = new ParticipantManager();
+        
+        // Récupération de tous les classements (homme et femme)
+        $classements = $participantManager->getAllClassements();
+        
+        // Définir la variable pour le titre du classement
+        $titreClassement = 'Individuel Femme';  // Valeur par défaut
+        $id_classement = null;
+        
+        // Déterminer l'ID de classement par défaut et le titre correspondant
+        foreach ($classements as $classement) {
+            if ($classement['sexe'] === 'Individuel Femme') {
+                $id_classement = $classement['id'];
+                $titreClassement = $classement['sexe'];
+                break;
+            }
+        }
+        
+        // Si un classement est sélectionné par l'utilisateur, on l'utilise
+        if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['id_classement'])) {
+            $id_classement = (int)$_POST['id_classement'];
+            // Mettre à jour le titre du classement sélectionné
+            foreach ($classements as $classement) {
+                if ($classement['id'] === $id_classement) {
+                    $titreClassement = $classement['sexe'];
+                    break;
+                }
+            }
+        }
+        
+        // Récupération des participants pour le classement sélectionné
+        $participants = $participantManager->getParticipantsByClassement($id_classement);
+        
+        // Charger la vue avec les données
+        include './views/resultat.view.php';
+    }
+    
+    
 }

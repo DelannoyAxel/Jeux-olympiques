@@ -248,7 +248,7 @@ ob_start();
 <section class="redirectionClassement">
 
     <div>
-        <a href="classement">voir le Classement</a>
+        <a href="resultat">voir le Classement</a>
     </div>
 
 </section>

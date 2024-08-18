@@ -46,5 +46,27 @@ class ParticipantManager
         $stmt = $this->pdo->prepare("DELETE FROM participant WHERE id = ?");
         $stmt->execute([$id]);
     }
+
+    public function getAllClassements()
+    {
+        $stmt = $this->pdo->prepare("SELECT * FROM classement");
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    // Récupérer tous les participants pour un classement spécifique
+    public function getParticipantsByClassement($id_classement)
+    {
+        $stmt = $this->pdo->prepare("
+            SELECT p.positionClassement, p.nomDuJoueur, p.resultatJoueur, e.pays, e.imgDrapeau
+            FROM participant p
+            JOIN equipe e ON p.id_equipe = e.id
+            WHERE p.id_Classement = ?
+            ORDER BY p.positionClassement ASC
+        ");
+        $stmt->execute([$id_classement]);
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+    
 }
 ?>

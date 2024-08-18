@@ -1,0 +1,129 @@
+// Définir les variables de couleur
+@darkGrey: #232323;
+@grey: #D9D9D9;
+@white: #f5f5f5;
+@gold: #D6C278;
+
+
+h1,
+h2 {
+    font-family: "Fira Sans", sans-serif;
+}
+
+
+// Style pour le formulaire de sélection
+.resultatClassement {
+    margin: 3% 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 2vh;
+
+    h1 {
+        font-size: 2rem;
+        text-transform: uppercase;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1vh;
+
+        label {
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: @darkGrey;
+        }
+
+        select {
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid @grey;
+            border-radius: 4px;
+            font-size: 16px;
+            width: 100%;
+            max-width: 300px;
+        }
+
+        button {
+            background-color: @gold;
+            color: @darkGrey;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            align-self: center;
+
+            &:hover {
+                background-color: darken(@gold, 10%);
+            }
+        }
+    }
+}
+
+.table-container {
+    width: 100%;
+    overflow-x: auto; // Permet le défilement horizontal si nécessaire
+    -webkit-overflow-scrolling: touch; // Pour un défilement fluide sur les appareils mobiles
+    padding: 10px 20px; // Ajoute un espace intérieur (haut/bas et gauche/droite)
+    margin: 0 auto; // Centrer le tableau
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: @white;
+    border-radius: 8px;
+    overflow: hidden; // Pour avoir des bordures arrondies
+
+    thead {
+        background-color: @darkGrey;
+        color: @white;
+        text-align: left;
+
+        th {
+            padding: 12px;
+            border-bottom: 2px solid @grey;
+            font-weight: bold;
+        }
+    }
+
+    tbody {
+        tr {
+            &:nth-child(odd) {
+                background-color: @grey;
+            }
+
+            &:nth-child(even) {
+                background-color: @white;
+            }
+
+            td {
+                padding: 12px;
+                border-bottom: 1px solid @grey;
+                vertical-align: middle;
+
+                img {
+                    display: inline-block;
+                    vertical-align: middle;
+                    margin-right: 8px;
+                    height: 20px;
+                    width: 30px;
+                }
+            }
+        }
+    }
+
+    // Style pour la dernière ligne sans bord inférieur
+    tfoot {
+        tr {
+            td {
+                border-bottom: none;
+            }
+        }
+    }
+}

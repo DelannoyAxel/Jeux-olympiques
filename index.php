@@ -25,10 +25,12 @@ try {
                 require "./views/accueil.view.php";
                 break;
 
-            case 'classement':
-                require "./views/classement.view.php";
-                break;
-
+            case 'resultat':
+                case 'resultat':
+                    $controller = new ClassementController();
+                    $controller->resultatClassement();
+                    break;
+                    
             case "login":
                 $controller = new LoginController();
                 $controller->login();
@@ -151,6 +153,9 @@ try {
                     $controller->delete($url[1]);
                 }
                 break;
+
+
+
 
             default:
                 throw new Exception("La page n'existe pas");
