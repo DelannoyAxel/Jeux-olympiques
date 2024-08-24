@@ -10,6 +10,8 @@ body {
 .gestionCrud {
   flex: 1;
   padding: 20px;
+  overflow: hidden;
+  overflow-x: auto;
 }
 .gestionCrud header {
   display: flex;
@@ -83,7 +85,6 @@ body {
   cursor: pointer;
   color: grey;
 }
-/* Style du conteneur du formulaire pour crée un utilisateur */
 .formulaireUtilisateur {
   max-width: 600px;
   margin: 30px auto;

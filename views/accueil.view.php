@@ -50,29 +50,29 @@ ob_start();
     </div>
 </section>
 
-<section class="actualitesPc">
+<section class="actualitesPc" id="actualite">
 
     <div>
         <h2>TOUTES LES <span>ACTUALITÉS</span></h2>
     </div>
 
     <div class="rowInfo">
-        <div>
+        <div data-url="https://olympics.com/fr/infos/championnats-monde-pentathlon-moderne-2024-resultats-finale-hommes-jean-baptiste-mourcia-11e-valentin-belaud-13e">
             <h3>Résultats des français</h3>
             <p>aux mondiaux de penthatlon moderne 2024</p>
         </div>
-        <div>
+        <div data-url="https://olympics.com/fr/infos/championnats-monde-pentathlon-moderne-2024-presentation-selection-francaise-programme-comment-regarder-elodie-clouvel-valentin-belaud-direct">
             <h3>Présentation</h3>
             <p>mondiaux de penthatlon moderne 2024</p>
         </div>
     </div>
 
     <div class="rowInfo2">
-        <div>
+        <div data-url="https://olympics.com/fr/infos/jo-paris-2024-selection-francaise-liste-complete-athletes-francais-officiellement-selectionnes-direct">
             <h3>La séléction </h3>
             <p>française pour les JO de paris 2024</p>
         </div>
-        <div>
+        <div data-url="https://olympics.com/fr/infos/a-versailles-le-cheval-est-roi">
             <h3>Équitation aux JO</h3>
             <p> au château de versailles, le cheval est roi</p>
         </div>
@@ -81,7 +81,7 @@ ob_start();
 
 </section>
 
-<section class="histoire">
+<section class="histoire" id="histoire">
 
     <div>
         <h2>TOUTE<span> L'HISTOIRE</span></h2>
@@ -94,7 +94,7 @@ ob_start();
 
 </section>
 
-<section class="containerEpreuves">
+<section class="containerEpreuves" id="epreuves">
 
     <div>
         <h2>Plongez au coeur des épreuves</h2>
@@ -154,7 +154,7 @@ ob_start();
 
 </section>
 
-<section class="billetterie">
+<section class="billetterie" id="billetterie">
     <div>
         <h2>L'ESPACE <span>BILLETTERIE</span></h2>
     </div>

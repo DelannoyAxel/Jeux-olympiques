@@ -16,8 +16,6 @@ if (!isset($_SESSION['id'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="../public/css/template.css">
-    <link rel="stylesheet" href="../public/css/style.css"> -->
     <link rel="stylesheet" href="../public/css/profil.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -35,14 +33,14 @@ if (!isset($_SESSION['id'])) {
         <!-- Navbar PC -->
         <nav class="navPc">
             <div class="GroupeLeft">
-                <a href="index.php">ACCUEIL</a>
-                <a href="classement.php">CLASSEMENT</a>
+                <a href="accueil">ACCUEIL</a>
+                <a href="resultat">CLASSEMENT</a>
             </div>
 
             <img class="logoJo" src="./public/images/LOGO JO 1.svg" alt="Logo des jeux olympiques">
 
             <div class="GroupeRight">
-                <a href="#">BILLETERIE</a>
+                <a href="accueil#billetterie">BILLETERIE</a>
                 <?php if (isset($_SESSION['id'])) : ?>
                     <a href="" class="btnMonCompte">MON COMPTE ↓</a>
                     <div class="menuHiddenCompte">
@@ -66,9 +64,9 @@ if (!isset($_SESSION['id'])) {
             </div>
 
             <div class="menu" id="menu">
-                <a href="index.php">ACCUEIL</a>
-                <a href="classement.php">CLASSEMENT</a>
-                <a href="#">BILLETERIE</a>
+                <a href="accueil">ACCUEIL</a>
+                <a href="resultat">CLASSEMENT</a>
+                <a href="accueil#billetterie">BILLETERIE</a>
             </div>
 
             <img class="logoJo" src="./public/images/LOGO JO 1.svg" alt="Logo des jeux olympiques">

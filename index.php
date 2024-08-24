@@ -30,7 +30,7 @@ try {
                     $controller = new ClassementController();
                     $controller->resultatClassement();
                     break;
-                    
+
             case "login":
                 $controller = new LoginController();
                 $controller->login();
@@ -153,10 +153,6 @@ try {
                     $controller->delete($url[1]);
                 }
                 break;
-
-
-
-
             default:
                 throw new Exception("La page n'existe pas");
         }

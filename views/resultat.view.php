@@ -12,14 +12,12 @@ ob_start();
 <section class="resultatClassement">
     <h1>Consulter les résulatats des jeux pour Paris 2024</h1>
 
-    <!-- Formulaire pour sélectionner le classement -->
     <form method="post" action="">
-        <!-- <label for="id_classement">Sélectionnez un classement :</label> -->
         <select name="id_classement" id="id_classement" required>
             <?php foreach ($classements as $classement): ?>
                 <option value="<?= htmlspecialchars($classement['id']) ?>"
                     <?= (isset($id_classement) && $id_classement == $classement['id']) ? 'selected' : '' ?>>
-                    <?= htmlspecialchars($classement['sexe']) ?> <!-- Affichez "Homme" ou "Femme" selon le classement -->
+                    <?= htmlspecialchars($classement['sexe']) ?>
                 </option>
             <?php endforeach; ?>
         </select>
@@ -30,7 +28,7 @@ ob_start();
 <section class="classementTable">
     <h2>Résultats du classement</h2>
     <?php if (!empty($participants)): ?>
-        <div class="table-container"> <!-- Conteneur pour le défilement horizontal -->
+        <div class="table-container"> 
             <table>
                 <thead>
                     <tr>

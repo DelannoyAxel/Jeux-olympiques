@@ -2,8 +2,10 @@
 ob_start();
 ?>
 
-
-<h1>Bienvenu sur le Dashboard</h1>
+<div class="dashboardView">
+    <h1>Bienvenu sur le Dashboard</h1>
+    <img src="../public/images/22-Admin_panel-512.png" alt="photo admin panel ">
+</div>
 
 
 

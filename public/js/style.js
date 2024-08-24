@@ -26,7 +26,7 @@ document.getElementById('burger').addEventListener('click', function () {
     }
 });
 // ---------------------------
-// redirection des pages 
+// redirection des pages tel
 
 document.querySelectorAll('.actuRow').forEach(function (actu) {
     actu.addEventListener('click', function () {
@@ -37,6 +37,17 @@ document.querySelectorAll('.actuRow').forEach(function (actu) {
     });
 });
 
+// redirection des pages pc
+document.addEventListener('DOMContentLoaded', function (actu) {
+    document.querySelectorAll('.rowInfo div, .rowInfo2 div').forEach(function (div) {
+        div.addEventListener('click', function () {
+            const url = this.getAttribute('data-url');
+            if (url) {
+                window.location.href = url;
+            }
+        });
+    });
+});
 
 // menu mon compte tel
 

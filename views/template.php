@@ -30,14 +30,14 @@ if (session_status() == PHP_SESSION_NONE) {
         <!-- Navbar PC -->
         <nav class="navPc">
             <div class="GroupeLeft">
-                <a href="index.php">ACCUEIL</a>
-                <a href="classement.php">CLASSEMENT</a>
+                <a href="accueil">ACCUEIL</a>
+                <a href="resultat">CLASSEMENT</a>
             </div>
 
             <img class="logoJo" src="./public/images/LOGO JO 1.svg" alt="Logo des jeux olympiques">
 
             <div class="GroupeRight">
-                <a href="#">BILLETERIE</a>
+                <a href="accueil#billetterie">BILLETERIE</a>
                 <?php if (isset($_SESSION['id'])) : ?>
                     <a href="" class="btnMonCompte">MON COMPTE ↓</a>
                     <div class="menuHiddenCompte">
@@ -61,9 +61,9 @@ if (session_status() == PHP_SESSION_NONE) {
             </div>
 
             <div class="menu" id="menu">
-                <a href="index.php">ACCUEIL</a>
-                <a href="classement.php">CLASSEMENT</a>
-                <a href="#">BILLETERIE</a>
+                <a href="accueil">ACCUEIL</a>
+                <a href="resultat">CLASSEMENT</a>
+                <a href="accueil#billetterie">BILLETERIE</a>
             </div>
 
             <img class="logoJo" src="./public/images/LOGO JO 1.svg" alt="Logo des jeux olympiques">
@@ -125,11 +125,11 @@ if (session_status() == PHP_SESSION_NONE) {
             <div class="footerLinks">
                 <h4>Jeux Olympiques</h4>
                 <div>
-                    <a href="index.php">ACTUALITÉS</a>
-                    <a href="classement.php">HISTOIRE</a>
-                    <a href="#">EPREUVES</a>
-                    <a href="#">BILLETERIE</a>
-                    <a href="#">CLASSEMENT</a>
+                    <a href="accueil#actualite">ACTUALITÉS</a>
+                    <a href="accueil#histoire">HISTOIRE</a>
+                    <a href="accueil#epreuves">EPREUVES</a>
+                    <a href="accueil#billetterie">BILLETERIE</a>
+                    <a href="resultat">CLASSEMENT</a>
                 </div>
             </div>
 
