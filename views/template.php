@@ -14,6 +14,7 @@ if (session_status() == PHP_SESSION_NONE) {
     <link rel="stylesheet" href="../public/css/template.css">
     <link rel="stylesheet" href="../public/css/style.css">
     <link rel="stylesheet" href="../public/css/resultat-classement.css">
+    <link rel="stylesheet" href="../public/css/footers.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
@@ -63,7 +64,6 @@ if (session_status() == PHP_SESSION_NONE) {
             <div class="menu" id="menu">
                 <a href="accueil">ACCUEIL</a>
                 <a href="resultat">CLASSEMENT</a>
-                <a href="accueil#billetterie">BILLETERIE</a>
             </div>
 
             <img class="logoJo" src="./public/images/LOGO JO 1.svg" alt="Logo des jeux olympiques">
@@ -147,9 +147,9 @@ if (session_status() == PHP_SESSION_NONE) {
 
         <div class="royalties">
             <p>Par Royalties — https://www.paris2024.org/fr/</p>
-            <a href="">Mentions légals</a>
-            <a href="">Plan du site</a>
-            <a href="">Politique des cookies</a>
+            <a href="mentionsLegales">Mentions légals</a>
+            <a href="planDuSite">Plan du site</a>
+            <a href="politiqueCookies">Politique des cookies</a>
         </div>
 
     </footer>

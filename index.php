@@ -24,12 +24,11 @@ try {
             case 'accueil':
                 require "./views/accueil.view.php";
                 break;
-
+                // case 'resultat':
             case 'resultat':
-                case 'resultat':
-                    $controller = new ClassementController();
-                    $controller->resultatClassement();
-                    break;
+                $controller = new ClassementController();
+                $controller->resultatClassement();
+                break;
 
             case "login":
                 $controller = new LoginController();
@@ -153,6 +152,19 @@ try {
                     $controller->delete($url[1]);
                 }
                 break;
+
+            case 'mentionsLegales':
+                require "./views/mentionlegal.view.php";
+                break;
+
+            case 'planDuSite':
+                require "./views/planDuSite.view.php";
+                break;
+
+            case 'politiqueCookies':
+                require "./views/politique-cookies.view.php";
+                break;
+
             default:
                 throw new Exception("La page n'existe pas");
         }

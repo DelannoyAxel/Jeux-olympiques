@@ -3,7 +3,7 @@ ob_start();
 ?>
 
 <section class="hero">
-    <img src="public/images/escrim-big.png" alt="Pentathlon Moderne à Paris" class="hero-image">
+    <img src="../public/images/bg-classement.png" alt="Pentathlon Moderne à Paris" class="hero-image">
     <div>
         <h1>Découvrez l'excellence athlétique : le classement du Pentathlon Moderne</h1>
     </div>

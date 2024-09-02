@@ -49,7 +49,6 @@ document.addEventListener('DOMContentLoaded', function (actu) {
     });
 });
 
-// menu mon compte tel
 
 
 // menu mon compte PC

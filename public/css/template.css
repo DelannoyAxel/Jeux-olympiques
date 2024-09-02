@@ -16,6 +16,7 @@ header {
   top: 0;
   width: 100%;
   z-index: 1000;
+  background-color: rgba(35, 35, 35, 0.1);
 }
 header .navPc {
   display: none;
@@ -75,27 +76,10 @@ header .navTel .menu a {
   opacity: 0;
   transform: translateY(-50px);
   transition: opacity 0.5s, transform 0.5s;
+  font-size: 1.5rem;
 }
-header .navTel .menu a::before,
-header .navTel .menu a::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0%;
-  height: 2px;
-  background-color: var(--gold);
-  transition: width 0.3s ease-in-out, opacity 0.3s ease-in-out;
-}
-header .navTel .menu a::after {
-  left: auto;
-  right: 0;
-  background-color: var(--gold);
-}
-header .navTel .menu a:hover::before,
-header .navTel .menu a:hover::after {
-  /* Longueur du soulignement à 100% */
-  width: 100%;
+header .navTel .menu a:hover {
+  text-decoration: underline;
 }
 header .navTel .logoJo {
   width: 15%;
@@ -269,7 +253,7 @@ footer .royalties a {
   }
   header .navTel .menu a {
     text-decoration: none;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     margin: 0.5rem 0;
     opacity: 0;
     transform: translateY(-50px);
@@ -305,7 +289,7 @@ footer .royalties a {
   }
   header .navTel .menu a {
     text-decoration: none;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     margin: 0.5rem 0;
     opacity: 0;
     transform: translateY(-50px);
@@ -356,7 +340,7 @@ footer .royalties a {
   }
   header .navTel .menu a {
     text-decoration: none;
-    font-size: 1.3rem;
+    font-size: 1.8rem;
     margin: 0.5rem 0;
     opacity: 0;
     transform: translateY(-50px);

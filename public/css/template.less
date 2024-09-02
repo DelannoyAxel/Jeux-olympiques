@@ -20,6 +20,8 @@ header {
     top: 0;
     width: 100%;
     z-index: 1000;
+    background-color: rgba(35, 35, 35, 0.1);
+
 
     .navPc {
         display: none;
@@ -89,35 +91,12 @@ header {
                 opacity: 0;
                 transform: translateY(-50px);
                 transition: opacity 0.5s, transform 0.5s;
+                font-size: 1.5rem ;
+
+                &:hover {
+                    text-decoration: underline;
+                }
             }
-
-            a::before,
-            a::after {
-                content: '';
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                width: 0%;
-                // Hauteur du soulignement 
-                height: 2px;
-                background-color: var(--gold);
-                transition: width 0.3s ease-in-out, opacity 0.3s ease-in-out;
-            }
-
-            a::after {
-                left: auto;
-                right: 0;
-                background-color: var(--gold);
-            }
-
-            // Longueur du soulignement à 100% 
-            a:hover::before,
-            a:hover::after {
-                /* Longueur du soulignement à 100% */
-                width: 100%;
-            }
-
-
         }
 
         .logoJo {
@@ -347,7 +326,7 @@ footer {
 
                 a {
                     text-decoration: none;
-                    font-size: 1.3rem;
+                    font-size: 1.5rem;
                     margin: 0.5rem 0;
                     opacity: 0;
                     transform: translateY(-50px);
@@ -438,7 +417,7 @@ footer {
 
                 a {
                     text-decoration: none;
-                    font-size: 1.3rem;
+                    font-size: 1.5rem;
                     margin: 0.5rem 0;
                     opacity: 0;
                     transform: translateY(-50px);
@@ -539,7 +518,7 @@ footer {
 
                 a {
                     text-decoration: none;
-                    font-size: 1.3rem;
+                    font-size: 1.8rem;
                     margin: 0.5rem 0;
                     opacity: 0;
                     transform: translateY(-50px);

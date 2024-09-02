@@ -607,56 +607,14 @@ h4 {
   .actualitesPc > div:nth-of-type(1) h2 span {
     color: #D6C278;
   }
-  .actualitesPc .rowInfo {
-    display: flex;
-    gap: 2%;
-    padding-bottom: 2%;
-    height: 250px;
-  }
-  .actualitesPc .rowInfo > div {
-    background-size: cover;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    gap: 4%;
-    cursor: pointer;
-  }
-  .actualitesPc .rowInfo > div:nth-child(1) {
-    background-image: url('/public/images/info1.png');
-    background-position-y: 80%;
-    flex: 1 1 69%;
-  }
-  .actualitesPc .rowInfo > div:nth-child(1)::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.3);
-    z-index: 1;
-  }
-  .actualitesPc .rowInfo > div:nth-child(2) {
-    flex: 1 1 29%;
-    background-image: url('/public/images/actu2.png');
-    background-position-x: 45%;
-  }
-  .actualitesPc .rowInfo > div:nth-child(2)::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.3);
-    z-index: 1;
-  }
+  .actualitesPc .rowInfo,
   .actualitesPc .rowInfo2 {
     display: flex;
     gap: 2%;
     height: 250px;
+    padding-bottom: 2%;
   }
+  .actualitesPc .rowInfo > div,
   .actualitesPc .rowInfo2 > div {
     background-size: cover;
     position: relative;
@@ -665,12 +623,14 @@ h4 {
     justify-content: flex-end;
     gap: 4%;
     cursor: pointer;
+    transition: transform 0.3s ease, background-size 0.3s ease;
   }
-  .actualitesPc .rowInfo2 > div:nth-child(1) {
-    background-image: url('/public/images/info3.png');
-    flex: 1 1 29%;
+  .actualitesPc .rowInfo > div:hover,
+  .actualitesPc .rowInfo2 > div:hover {
+    transform: scale(1.03);
   }
-  .actualitesPc .rowInfo2 > div:nth-child(1)::before {
+  .actualitesPc .rowInfo > div::before,
+  .actualitesPc .rowInfo2 > div::before {
     content: '';
     position: absolute;
     top: 0;
@@ -679,22 +639,28 @@ h4 {
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.3);
     z-index: 1;
+  }
+  .actualitesPc .rowInfo > div:nth-child(1),
+  .actualitesPc .rowInfo2 > div:nth-child(1) {
+    background-image: url('/public/images/info1.png');
+    background-position-y: 80%;
+    flex: 1 1 69%;
+  }
+  .actualitesPc .rowInfo > div:nth-child(2),
+  .actualitesPc .rowInfo2 > div:nth-child(2) {
+    flex: 1 1 29%;
+    background-image: url('/public/images/actu2.png');
+    background-position-x: 45%;
+  }
+  .actualitesPc .rowInfo2 > div:nth-child(1) {
+    background-image: url('/public/images/info3.png');
+    flex: 1 1 29%;
   }
   .actualitesPc .rowInfo2 > div:nth-child(2) {
     flex: 1 1 69%;
     background-image: url('/public/images/info4.png');
     background-position-x: 45%;
     background-position-y: 40%;
-  }
-  .actualitesPc .rowInfo2 > div:nth-child(2)::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.3);
-    z-index: 1;
   }
   .histoire {
     margin-top: 5%;

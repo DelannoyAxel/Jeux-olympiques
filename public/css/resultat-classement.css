@@ -10,7 +10,7 @@ h2 {
   align-items: center;
   gap: 2vh;
 }
-.resultatClassement h1 {
+.resultatClassement h2 {
   font-size: 1.5rem;
   text-transform: uppercase;
   margin: 0 5%;

@@ -77,8 +77,6 @@ ob_start();
             <p> au château de versailles, le cheval est roi</p>
         </div>
     </div>
-
-
 </section>
 
 <section class="histoire" id="histoire">

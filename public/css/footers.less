@@ -1,0 +1,81 @@
+@primary-color: #333;
+@background-color: #f4f4f4;
+@heading-color: #555;
+@text-color: #666;
+@link-color: #0066cc;
+@link-hover-color: #004d99;
+
+
+
+.legal-container {
+    width: 80%;
+    margin: 25vh auto 5vh auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.legal-title {
+    color: @primary-color;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.legal-main {
+    line-height: 1.6;
+}
+
+.legal-section {
+    margin-bottom: 20px;
+}
+
+.legal-section-title {
+    color: @heading-color;
+    border-bottom: 1px solid @primary-color;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+p {
+    margin: 0 0 10px;
+}
+
+a {
+    color: @link-color;
+    text-decoration: none;
+
+    &:hover {
+        color: @link-hover-color;
+        text-decoration: underline;
+    }
+}
+
+
+@media only screen and (min-width:320px) {
+
+    .legal-container {
+        margin: 10vh auto 5vh auto;
+    }
+}
+
+@media only screen and (min-width:425px) {
+
+    .legal-container {
+        margin: 15vh auto 5vh auto;
+    }
+}
+
+@media only screen and (min-width:768px) {
+
+    .legal-container {
+        margin: 20vh auto 5vh auto;
+    }
+}
+
+@media only screen and (min-width:800px) {
+
+    .legal-container {
+        margin: 25vh auto 5vh auto;
+    }
+}
