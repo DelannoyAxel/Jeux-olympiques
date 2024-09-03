@@ -83,22 +83,88 @@ document.addEventListener('DOMContentLoaded', (event) => {
     });
 });
 
+// script cookies
+document.addEventListener("DOMContentLoaded", function() {
+    const acceptCookiesButton = document.getElementById('accept-cookies');
+    const rejectCookiesButton = document.getElementById('reject-cookies');
+    const cookiePopup = document.getElementById('cookie-popup');
+
+    function handleCookiePopup() {
+        const userChoice = localStorage.getItem('cookies-validation');
+        if (userChoice === null) {
+            cookiePopup.style.display = 'flex';
+        } else {
+            cookiePopup.style.display = 'none';
+        }
+    }
+
+    handleCookiePopup(); // Vérifie l'état au chargement de la page
+
+    if (acceptCookiesButton && rejectCookiesButton) {
+        acceptCookiesButton.addEventListener('click', function () {
+            localStorage.setItem('cookies-validation', 'true');
+            cookiePopup.style.display = 'none';
+        });
+
+        rejectCookiesButton.addEventListener('click', function () {
+            localStorage.setItem('cookies-validation', 'false');
+            cookiePopup.style.display = 'none';
+        });
+    } else {
+        console.error("Un ou plusieurs éléments requis pour la gestion des cookies sont manquants.");
+    }
+});
 
 
-// -------------
+
 // PAGE PROFIL
-// -------------
+document.addEventListener("DOMContentLoaded", function () {
+    const profilSection = document.querySelector(".profilSection");
+    const profilSectionUpdate = document.querySelector(".profilSectionUpdate");
+    const editButton = document.getElementById("editButton");
+    const majProfil = document.getElementById("majProfil");
 
-const profilSection = document.querySelector(".profilSection")
-const profilSectionUpdate = document.querySelector(".profilSectionUpdate")
+    if (profilSection && profilSectionUpdate && editButton && majProfil) {
+        editButton.addEventListener("click", function () {
+            profilSection.style.display = "none";
+            profilSectionUpdate.style.display = "flex";
+        });
 
-document.getElementById("editButton").addEventListener("click", function(){
-    profilSection.style.display = "none";
-    profilSectionUpdate.style.display = "flex";
+        majProfil.addEventListener("click", function () {
+            profilSectionUpdate.style.display = "none";
+            profilSection.style.display = "flex";
+        });
+    } else {
+        console.error("Un ou plusieurs éléments requis pour la gestion du profil sont manquants.");
+    }
 });
 
 
-document.getElementById("majProfil").addEventListener("click", function(){
-profilSectionUpdate.style.display = "none"
-profilSection.style.display = "flex"
-});
+
+
+// // Script pour la gestion des cookies
+// document.getElementById('accept-cookies').addEventListener('click', function () {
+//     document.getElementById('cookie-popup').style.display = 'none';
+// });
+
+// document.getElementById('reject-cookies').addEventListener('click', function () {
+//     document.getElementById('cookie-popup').style.display = 'none';
+// });
+
+// // -------------
+// // PAGE PROFIL
+// // -------------
+
+// const profilSection = document.querySelector(".profilSection")
+// const profilSectionUpdate = document.querySelector(".profilSectionUpdate")
+
+// document.getElementById("editButton").addEventListener("click", function () {
+//     profilSection.style.display = "none";
+//     profilSectionUpdate.style.display = "flex";
+// });
+
+
+// document.getElementById("majProfil").addEventListener("click", function () {
+//     profilSectionUpdate.style.display = "none"
+//     profilSection.style.display = "flex"
+// });

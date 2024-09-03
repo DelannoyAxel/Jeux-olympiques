@@ -236,10 +236,7 @@ ob_start();
                     <p>JE RÉSERVE</p>
                 </div>
             </div>
-
-
         </div>
-    </div>
     </div>
 </section>
 
@@ -250,6 +247,16 @@ ob_start();
     </div>
 
 </section>
+
+<div id="cookie-popup" class="cookie-popup">
+    <p>Nous utilisons des cookies pour améliorer votre expérience sur notre site. En continuant, vous acceptez notre utilisation des cookies.</p>
+    <div class="cookie-buttons">
+        <button id="accept-cookies">Accepter</button>
+        <button id="reject-cookies">Refuser</button>
+    </div>
+</div>
+
+
 
 
 <?php
