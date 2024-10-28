@@ -1,6 +1,6 @@
 <?php
 
-require_once "DbConnect.php";
+require_once "MyDbConnect.php";
 
 class UserManager
 {

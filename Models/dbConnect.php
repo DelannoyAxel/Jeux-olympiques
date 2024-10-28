@@ -18,9 +18,9 @@ abstract class DbConnect
         $charset = 'utf8mb4';
 
         // S'il y'a des certificat il faudrat au préalable déterminer les chemin d'accès quelque part, soit dans un fichier appart généralement .env ou ici en php 
-        // putenv('DB_SSL_CA=/path/to/ca.pem');
-        // putenv('DB_SSL_CERT=/path/to/cert.pem');
-        // putenv('DB_SSL_KEY=/path/to/key.pem');
+        // putenv('DB_SSL_CA=/path/');
+        // putenv('DB_SSL_CERT=/path/');
+        // putenv('DB_SSL_KEY=/path/');
 
 
         // Récupére les chemins d'accès aux fichiers SSL à partir des variables d'environnement
